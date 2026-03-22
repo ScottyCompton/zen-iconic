@@ -26,7 +26,7 @@ function PriceBlock({
   value: string | null;
 }) {
   return (
-    <div className="mt-5 rounded-xl border border-white/[0.07] bg-zinc-950/50 px-4 py-3">
+    <div className="mt-5 rounded-xl border border-emerald-400/12 bg-[#1c342c]/58 px-4 py-3">
       <p className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500">
         {label}
       </p>
@@ -85,7 +85,7 @@ export function PricingTable({ tiers, footnote, className }: PricingTableProps) 
                     className="flex gap-3 text-sm leading-relaxed text-zinc-300"
                   >
                     <span
-                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400/65"
+                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-lime-400/70"
                       aria-hidden
                     />
                     <span>{line}</span>

@@ -1,45 +1,45 @@
 import type { Feature, HomePoint } from "./types";
 
 export const homePageTitle =
-  "Digital presence for service businesses" as const;
+  "Growth, presence, and leads for local service businesses" as const;
 
 export const homeHero = {
-  eyebrow: "Websites for service brands",
-  headline: "Presence that converts. Structure that scales.",
+  eyebrow: "Zen/Iconic",
+  headline: "More customers. Clearer presence. Ongoing support.",
   subhead:
-    "We design and build the digital layer you run leads through—clear story, fast experience, contact paths that match real hiring behavior.",
-  primaryCta: { href: "/contact", label: "Start a project" },
+    "We help local service businesses win work through better visibility, credibility, and lead capture. The site is infrastructure—we build and manage the whole digital layer so people can find you, trust you, and reach you without friction.",
+  primaryCta: { href: "/contact", label: "Talk with us" },
   secondaryCta: { href: "/how-it-works", label: "How we work" },
 } as const;
 
 export const homeValueStripSection = {
-  title: "How we work with you",
-  subtitle: "Three commitments on every engagement.",
+  title: "How we think about the work",
+  subtitle: "Three principles that shape every relationship.",
 } as const;
 
 export const homeValueProps: Feature[] = [
   {
-    title: "Clarity",
+    title: "Demand first",
     description:
-      "Offer, audience, and proof stated plainly—so the right prospect recognizes you in one scroll.",
+      "We start from who you need to reach and how they choose a provider—not from page templates. Clarity beats decoration when the goal is booked work.",
   },
   {
-    title: "Conversion",
+    title: "Presence that converts",
     description:
-      "CTAs, trust, and page flow aligned to how people actually book trades and professional services.",
+      "Search, maps, and referrals send people to one place. We keep that presence accurate, fast, and easy to act on so interest turns into contact.",
   },
   {
-    title: "Continuity",
+    title: "Partnership, not handoff",
     description:
-      "Launch is baseline. We iterate with your services, markets, and what qualified leads tell you.",
+      "Most operators need ongoing help: updates, new offers, SEO pages, fixes, and judgment calls. We stay in the loop so your digital side keeps pace with the business.",
   },
 ];
 
 export const homeServicesOverviewSection = {
-  title: "What we deliver",
+  title: "What we run with you",
   subtitle:
-    "Positioning, product, and performance—handled as one system, not disconnected tickets.",
-  cta: { href: "/services", label: "Full service detail" },
+    "A single engagement covers the systems prospects touch before they call—messaging, surfaces, capture, hosting, and steady improvement. Not a brochure project.",
+  cta: { href: "/services", label: "See how it breaks down" },
 } as const;
 
 export const homeWhyItMatters: {
@@ -47,44 +47,47 @@ export const homeWhyItMatters: {
   lead: string;
   points: HomePoint[];
 } = {
-  title: "Why it matters",
-  lead: "In service businesses, the website is often the entire first meeting. Weak structure does not create mystery—it creates silence.",
+  title: "What an outdated presence actually costs",
+  lead: "When listings are thin, the story is vague, or contact is buried, people do not argue—they hire someone else. That cost shows up as fewer calls, not as a line item.",
   points: [
     {
-      title: "Comparison is instant",
-      text: "Prospects skim three tabs. If scope, proof, or contact is unclear, they do not debate—they move on.",
+      title: "Visibility and credibility move together",
+      text: "If you are hard to parse or slow to load on a phone, you read as less established than a competitor who is not.",
     },
     {
-      title: "Trust is structural",
-      text: "Reviews and credentials only work when the page guides the eye and the next step is obvious.",
+      title: "One-time builds go stale",
+      text: "Services change, seasons change, and search behavior changes. Without a partner, the asset that was “done” quietly stops representing how you operate today.",
     },
     {
-      title: "Growth changes the site",
-      text: "New lines, regions, and campaigns need templates and IA that flex without a rebuild every year.",
+      title: "You need a system, not a PDF",
+      text: "We build and manage digital infrastructure—pages, forms, tracking, hosting, updates—so discovery and contact stay reliable month to month.",
     },
   ],
 };
 
 export const homeProcessSection = {
-  title: "Process",
-  subtitle: "Outcome per phase. No fog between milestones.",
-  cta: { href: "/how-it-works", label: "Explore each phase" },
+  title: "How engagement runs",
+  subtitle:
+    "Audit, plan, build, launch, then improve on a rhythm. You always know what we are doing and why.",
+  cta: { href: "/how-it-works", label: "See each phase" },
 } as const;
 
 export const homeIndustriesSection = {
-  cta: { href: "/contact", label: "Talk about your market" },
+  cta: { href: "/contact", label: "Talk about your trade" },
 } as const;
 
 export const homePricingPreviewSection = {
-  title: "Investment",
-  subtitle: "Starting frameworks. We fix fee and timeline after discovery.",
-  cta: { href: "/pricing", label: "Full pricing detail" },
-  footnote: "Written scope before deposit. Change orders only when you change the brief.",
+  title: "Subscription-based partnership",
+  subtitle:
+    "Modest onboarding, then a fixed monthly program—hosting, updates, SEO pages, improvements, and support. Tiers scale with how much capacity you need.",
+  cta: { href: "/pricing", label: "Compare tiers" },
+  footnote:
+    "Fees are confirmed in writing before work starts. This is structured as growth infrastructure, not a one-off quote for pages.",
 } as const;
 
 export const homeCta = {
-  title: "Next step: a focused conversation",
-  body: "Share your services, markets, and what qualified demand looks like. We respond with a clear path—not a generic pitch deck.",
-  primaryCta: { href: "/contact", label: "Request a call" },
-  secondaryCta: { href: "/pricing", label: "See tiers" },
+  title: "If growth depends on how you show up online, we should talk",
+  body: "Share what you do, where you operate, and how leads arrive today. We will be direct about fit, tier, and what a sensible first 90 days looks like.",
+  primaryCta: { href: "/contact", label: "Talk with us" },
+  secondaryCta: { href: "/pricing", label: "View pricing" },
 } as const;

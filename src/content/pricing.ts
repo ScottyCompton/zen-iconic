@@ -8,75 +8,76 @@ import type {
 export const pricingPage: ContentPage = {
   title: "Pricing",
   description:
-    "We treat your website as a growth surface—not a one-off brochure. Launch establishes the foundation; Growth and Momentum keep it compounding through steady iteration, support, and prioritization.",
+    "Zen/Iconic is priced as ongoing digital growth support—not a website invoice. A focused onboarding establishes your foundation; the monthly program keeps presence, leads, and technical care moving forward.",
 };
 
 export const pricingSeo = {
   keywords: [
-    "website pricing for service businesses",
-    "monthly website partnership",
-    "ongoing website growth",
-    "web design and support retainer",
+    "local service business marketing",
+    "ongoing digital presence support",
+    "lead generation partner",
+    "subscription digital growth",
+    "SEO and website management",
   ],
 } as const;
 
 export const pricingTiers: PricingTier[] = [
   {
     name: "Launch",
-    tagline: "A credible site that earns inquiries—without dragging on forever",
+    tagline: "A modern foundation and a professional, findable presence",
     description:
-      "Fixed-scope build: story, structure, speed, and contact paths aligned to how your buyers decide. Best when you need a strong baseline before you add a monthly rhythm.",
+      "For businesses that need to look and perform like the operator you are—clear story, solid structure, and contact paths that work. Onboarding establishes the base; the monthly plan keeps it hosted, current, and improving.",
     setup: "From $6.5k",
-    monthly: null,
+    monthly: "From $395/mo",
     billingNote:
-      "Project-based fee. Includes a post-launch support window; upgrade to Growth when you want ongoing iteration.",
+      "Onboarding covers discovery, build, and go-live. Monthly includes hosting, monitoring, fixes, and a scheduled rhythm of updates and SEO-oriented improvements.",
     benefits: [
-      "Clear positioning and page flow before design locks in",
-      "Fast, mobile-first experience that reflects how you actually operate",
-      "Forms and CTAs routed the way your team works today",
-      "Foundational SEO and analytics so you can see what drives leads",
+      "Positioning and page flow aligned to how local buyers decide",
+      "Fast, mobile-first presence that reflects real service areas and proof",
+      "Forms and routing your team will actually use",
+      "Baseline analytics so you can see what drives contact—not guess",
     ],
     cta: "Discuss Launch",
   },
   {
     name: "Growth",
-    tagline: "Build or relaunch—then keep shipping improvements every month",
+    tagline: "Ongoing improvements, SEO pages, updates, and visibility work",
     description:
-      "Setup covers the heavy lift; the monthly partnership is where leads, speed, and messaging get sharper over time. This is our default recommendation for operators who want the site to keep pace with the business.",
+      "For businesses that want the digital side to compound: new services and markets, landing pages, structured SEO pages, and steady refinement based on traffic and leads.",
     setup: "From $11k",
     monthly: "From $495/mo",
     billingNote:
-      "Partnership billed monthly after launch (three-month minimum, then flexible). Setup is scoped to your pages, integrations, and content load.",
+      "Higher onboarding when scope is larger; monthly includes expanded capacity for pages, tests, and prioritization. Three-month minimum to start, then flexible.",
     highlighted: true,
     benefits: [
-      "Roadmap tied to leads and behavior—not random redesigns",
-      "Room for new services, locations, or landing pages as priorities shift",
-      "Hosting, monitoring, and fixes included in the monthly lane",
-      "Direct access for prioritization—you are not filing tickets into a black hole",
+      "Backlog tied to leads and behavior—not one-off redesign cycles",
+      "Room for location, service, and campaign pages as priorities shift",
+      "Hosting, uptime, and break-fix covered inside the monthly program",
+      "Direct access for triage; we advise on what to ship next",
     ],
     cta: "Discuss Growth",
   },
   {
     name: "Momentum",
-    tagline: "Already live? Put full focus on conversion, performance, and backlog",
+    tagline: "Long-term lead focus—expansion pages, landing pages, optimization",
     description:
-      "For teams with a site in market: we onboard fast, align a backlog, and run a higher-touch monthly program—experiments, refinements, and support without a full rebuild unless you need one.",
+      "For operators who want a higher-touch partner: more velocity on landing pages, funnel refinement, expansion content, and continuous tuning without adding headcount.",
     setup: "From $4k",
     monthly: "From $995/mo",
     billingNote:
-      "Onboarding covers audit, plan, and first sprint. Monthly retainer scales with velocity and stakeholders.",
+      "Lower onboarding if you are already live; we align a backlog and sprint. Monthly scales with output and stakeholders.",
     benefits: [
-      "Lead and funnel diagnostics with a prioritized fix list",
-      "Continuous CRO-style iteration: copy, structure, speed, trust blocks",
-      "Campaign and seasonal pages without scrambling your internal team",
-      "Executive-ready reporting on what changed and what is next",
+      "Diagnostics on how people find you and where they drop",
+      "Iteration on copy, structure, speed, and trust where it affects contact",
+      "Campaign and seasonal support without scrambling your crew",
+      "Plain-language reporting on what shipped and what is queued",
     ],
     cta: "Discuss Momentum",
   },
 ];
 
 export const pricingFootnote: string =
-  "Every fee is fixed in writing after discovery. If scope shifts, we adjust with a change order—no surprise invoices.";
+  "Onboarding and monthly fees are fixed after a short discovery call. If priorities shift materially, we document the change so expectations stay honest on both sides.";
 
 export const pricingFaqSection = {
   title: "Straight answers",
@@ -84,30 +85,40 @@ export const pricingFaqSection = {
 
 export const pricingFaqs: PricingFaqItem[] = [
   {
+    question: "Is this “just a website”?",
+    answer:
+      "No. A site is part of the stack. The product is ongoing digital presence and lead support—hosting, updates, SEO pages, improvements, and someone accountable when something breaks or the business changes.",
+  },
+  {
+    question: "Why subscription instead of a one-time build?",
+    answer:
+      "Search, offers, and seasons move. A static build ages. Subscription aligns us with keeping you findable, credible, and easy to contact—not with disappearing after launch.",
+  },
+  {
     question: "Why monthly instead of hourly?",
     answer:
-      "Hourly rewards churn. A monthly partnership gives you predictable capacity, a shared backlog, and us thinking about outcomes—not filling timesheets. You always know what the engagement costs.",
+      "You get predictable cost and reserved capacity. We maintain a shared backlog and prioritize by impact on visibility and leads—not by who opened a ticket last.",
   },
   {
-    question: "Do I own the site?",
+    question: "How should I think about ROI?",
     answer:
-      "Yes. You own your content, accounts, and production assets. We document hosting and DNS so you are never held hostage by obscure logins.",
+      "We do not promise rankings or lead counts. Many local operators only need a handful of additional good jobs per month for disciplined presence work to be rational. We will be candid if the math does not make sense for your model.",
   },
   {
-    question: "What if I only want Launch?",
+    question: "Do I own the assets?",
     answer:
-      "That is fine. Launch is designed to ship something you are proud to send prospects to. Many clients add Growth when they want the site to evolve with new offers or markets.",
+      "Yes. Your content, accounts, and production work are yours. We document access so you are never locked behind opaque logins.",
   },
   {
-    question: "Can we pause or change tiers?",
+    question: "Can we change tiers?",
     answer:
-      "After any agreed minimum, we can adjust velocity or shift between Growth and Momentum based on what the business needs. Major scope changes get a quick written update so expectations stay aligned.",
+      "After any agreed minimum, we can adjust between Growth and Momentum or shift velocity. Meaningful scope changes get a short written update.",
   },
 ];
 
 export const pricingPageCta: ServicesCtaBlock = {
-  title: "Not sure which lane fits?",
-  body: "Tell us what is live today, what qualified demand looks like, and how hands-on you want support. We will recommend Launch, Growth, or Momentum—and if none fit, we will say so.",
-  primaryCta: { href: "/contact", label: "Talk through options" },
-  secondaryCta: { href: "/how-it-works", label: "See the process" },
+  title: "Unsure which tier matches how you operate?",
+  body: "Tell us how leads arrive today, what “good work” looks like, and how much change you expect in the next year. We will recommend a lane—or tell you we are not the right fit.",
+  primaryCta: { href: "/contact", label: "Talk with us" },
+  secondaryCta: { href: "/how-it-works", label: "How we work" },
 };

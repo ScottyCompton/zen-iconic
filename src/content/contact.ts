@@ -1,20 +1,20 @@
 export const contactPage = {
   title: "Contact",
   description:
-    "Reach Zen/Iconic about a dated site, uneven lead flow, or a rebuild. We reply within one business day with a clear next step.",
+    "Reach Zen/Iconic about visibility, lead flow, or ongoing digital support for your service business. We reply within one business day with a clear next step.",
 } as const;
 
 export const contactSeo = {
   keywords: [
-    "contact web studio",
-    "service business website help",
-    "website redesign inquiry",
+    "contact digital growth partner",
+    "local service business marketing help",
+    "ongoing digital presence support",
   ],
 } as const;
 
 export const contactCopy = {
-  headline: "Tell us what is not working",
-  body: "If the site feels behind the business, leads arrive in spikes you cannot trace, or prospects drop before they call—send a short note. We work with service operators who want a calmer, more legible digital front door.",
+  headline: "Tell us what you are trying to improve",
+  body: "If presence feels behind the business, leads arrive in spikes you cannot trace, or prospects drop before they call—send a short note. We work with operators who want a calmer, more legible path from discovery to contact.",
   directLabel: "Prefer email?",
 } as const;
 

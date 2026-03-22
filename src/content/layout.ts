@@ -3,7 +3,7 @@
  */
 
 export const layoutHeader = {
-  cta: { href: "/contact", label: "Start a project" },
+  cta: { href: "/contact", label: "Talk with us" },
   mobileMenuTrigger: "Menu",
 } as const;
 
@@ -14,8 +14,8 @@ export const layoutFooter = {
     colophon: "Colophon",
   },
   colophonBody:
-    "Built with intention. Designed for service brands that value craft, clarity, and long-term growth.",
-  inquiry: { href: "/contact", label: "Project inquiry" },
+    "Ongoing digital presence and lead support for local service operators—clear, calm, and built to last.",
+  inquiry: { href: "/contact", label: "Contact" },
   closingLine:
-    "Premium digital experiences for modern service businesses.",
+    "Infrastructure for visibility, credibility, and contact—not a one-time site handoff.",
 } as const;

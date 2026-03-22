@@ -1,9 +1,9 @@
 import type { Industry } from "./types";
 
 export const industriesIntro: { headline: string; supporting: string } = {
-  headline: "Built around how service buyers choose",
+  headline: "Local proof, local urgency",
   supporting:
-    "Verticals differ in proof, urgency, and compliance. The through-line is the same: make the decision easy for someone who is comparing you on a screen.",
+    "Trades, clinics, and field services all face different compliance and buying habits. The constant is simple: people need to find you, believe you, and reach you without friction.",
 };
 
 export const industries: Industry[] = [
@@ -11,55 +11,55 @@ export const industries: Industry[] = [
     slug: "home-services",
     title: "Home services & trades",
     context:
-      "Emergency calls, seasonal demand, and local competition. Buyers scan for licenses, areas served, and speed to contact.",
+      "Emergency calls, seasonal demand, and tight local comparison. Searchers scan for coverage, licenses, and a fast path to contact.",
     priorities: [
-      "Service-area clarity and dispatch-friendly CTAs",
-      "Reviews, guarantees, and crew credibility up front",
-      "Mobile speed for search-on-the-go traffic",
+      "Service-area clarity and dispatch-friendly contact",
+      "Proof up front: reviews, guarantees, crew credibility",
+      "Mobile speed for on-the-go searches",
     ],
   },
   {
     slug: "professional-services",
     title: "Professional & advisory",
     context:
-      "Longer consideration, higher trust bar. Prospects read bios, case cues, and process before they book a conversation.",
+      "Longer consideration and higher trust. Prospects read for fit, process, and who actually does the work before they book time.",
     priorities: [
-      "Authority without jargon",
-      "Clear intake: who you help, what it costs to start, what happens next",
-      "Content structure that supports referrals and search",
+      "Plain-language authority—no jargon as a substitute for substance",
+      "Intake that states who you help and what happens next",
+      "Structure that supports referrals and search over time",
     ],
   },
   {
     slug: "health-wellness",
     title: "Health & wellness",
     context:
-      "Sensitivity around outcomes and privacy. Visitors need calm design, transparent scope, and easy ways to reach a human.",
+      "Sensitivity around outcomes and privacy. Visitors need calm layout, transparent scope, and a human path to reach you.",
     priorities: [
-      "Accessible language and calm visual hierarchy",
-      "Appointment or inquiry flows that reduce back-and-forth",
-      "Compliance-aware forms and policy placement",
+      "Accessible language and a steady visual hierarchy",
+      "Flows that reduce back-and-forth for appointments or inquiries",
+      "Policies and forms placed where they belong—not hidden",
     ],
   },
   {
     slug: "b2b-specialty",
     title: "B2B specialty contractors",
     context:
-      "Technical buyers validate fit fast: capabilities, certifications, safety record, and how you engage procurement.",
+      "Technical buyers validate fit quickly: capabilities, safety, certifications, and how procurement will engage you.",
     priorities: [
-      "Capability pages that map to how RFPs are written",
-      "Proof stacks: logos, metrics, project classes",
-      "Download or contact paths matched to deal size",
+      "Capability depth that matches how RFPs are written",
+      "Proof stacks: logos, project classes, outcomes where you can share them",
+      "Contact paths sized to deal type—from spec to enterprise",
     ],
   },
   {
     slug: "local-multi-location",
     title: "Multi-location operators",
     context:
-      "Brand consistency with local relevance. Each market needs its own signals without fragmenting the parent story.",
+      "Brand consistency with local relevance. Each market needs its own signals without splintering the parent story.",
     priorities: [
-      "Template system for location and service variants",
-      "Centralized brand, localized proof and contact",
-      "Structured data and crawl clarity at scale",
+      "Templates for location and service variants without duplicate chaos",
+      "Central brand, local proof and contact",
+      "Crawl-friendly structure as footprint grows",
     ],
   },
 ];

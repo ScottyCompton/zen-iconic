@@ -45,6 +45,7 @@ export default function HomePage() {
         subhead={homeHero.subhead}
         primaryCta={homeHero.primaryCta}
         secondaryCta={homeHero.secondaryCta}
+        logoPriority
       />
       <ValueStrip
         id="value"

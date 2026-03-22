@@ -35,7 +35,7 @@ export function ProcessPhases({ phases, className }: ProcessPhasesProps) {
                 />
               )}
               <span
-                className="absolute left-0 top-1 flex h-7 w-7 items-center justify-center rounded-full border border-emerald-500/30 bg-zinc-950 text-[10px] font-semibold tabular-nums text-emerald-400/95 ring-4 ring-zinc-950 sm:top-0.5 sm:h-8 sm:w-8 sm:text-[11px]"
+                className="absolute left-0 top-1 flex h-7 w-7 items-center justify-center rounded-full border border-lime-400/35 bg-[#152922] text-[10px] font-semibold tabular-nums text-lime-400/95 ring-4 ring-[#152922] sm:top-0.5 sm:h-8 sm:w-8 sm:text-[11px]"
                 aria-hidden
               >
                 {String(index + 1).padStart(2, "0")}

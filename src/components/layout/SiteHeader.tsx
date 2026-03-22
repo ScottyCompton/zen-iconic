@@ -4,7 +4,14 @@ import { layoutHeader } from "@/content/layout";
 import { navItems } from "@/content/navigation";
 import { site } from "@/content/site";
 import { cn } from "@/lib/cn";
-import { borderHairline, linkPrimary, navLink } from "@/lib/marketing-styles";
+import {
+  borderHairline,
+  focusRing,
+  linkPrimary,
+  navLink,
+  surfaceHeader,
+  surfacePopover,
+} from "@/lib/marketing-styles";
 
 import { Container } from "./Container";
 
@@ -12,7 +19,8 @@ export function SiteHeader() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 border-b bg-zinc-950/85 backdrop-blur-md",
+        "sticky top-0 z-50 border-b",
+        surfaceHeader,
         borderHairline,
       )}
     >
@@ -22,7 +30,10 @@ export function SiteHeader() {
       >
         <Link
           href="/"
-          className="text-sm font-semibold tracking-tight text-zinc-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/50 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 rounded-sm"
+          className={cn(
+            "rounded-sm text-sm font-semibold tracking-tight text-zinc-50",
+            focusRing,
+          )}
         >
           {site.name}
         </Link>
@@ -49,16 +60,17 @@ export function SiteHeader() {
           <details className="relative md:hidden">
             <summary
               className={cn(
-                "list-none cursor-pointer select-none rounded-full border border-white/10 bg-zinc-950/80 px-3.5 py-2.5 text-xs font-medium text-zinc-200 min-h-[2.75rem] min-w-[2.75rem] flex items-center justify-center",
+                "flex min-h-[2.75rem] min-w-[2.75rem] cursor-pointer list-none select-none items-center justify-center rounded-full border border-lime-400/20 bg-[#1c342c]/82 px-3.5 py-2.5 text-xs font-medium text-zinc-200",
                 "marker:hidden [&::-webkit-details-marker]:hidden",
-                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/50 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950",
+                focusRing,
               )}
             >
               {layoutHeader.mobileMenuTrigger}
             </summary>
             <div
               className={cn(
-                "absolute right-0 z-50 mt-2 w-[min(100vw-2rem,18rem)] rounded-2xl border bg-zinc-950/98 p-2 shadow-xl shadow-black/40 backdrop-blur-md",
+                "absolute right-0 z-50 mt-2 w-[min(100vw-2rem,18rem)] rounded-2xl border p-2 shadow-xl shadow-black/35",
+                surfacePopover,
                 borderHairline,
               )}
             >

@@ -9,16 +9,15 @@ import type {
 export const processPage: ContentPage = {
   title: "How it works",
   description:
-    "A five-step path from audit to ongoing improvement. Fixed phase outputs, bounded design rounds, and plain-language checkpoints—so you always know what is happening next.",
+    "From audit through launch and into an ongoing improvement rhythm: fixed phase outputs, bounded design rounds, and plain-language checkpoints—so you always know what is happening next.",
 };
 
 export const processSeo = {
   keywords: [
-    "website process for service businesses",
-    "web design timeline",
-    "strategy call",
-    "website launch process",
-    "ongoing website support",
+    "digital growth process for service businesses",
+    "audit to launch timeline",
+    "ongoing digital presence support",
+    "subscription partnership workflow",
   ],
 } as const;
 
@@ -27,7 +26,7 @@ export const processPhases: ProcessPhase[] = [
   {
     id: "audit",
     title: "Audit",
-    body: "We review your current site, analytics if you have them, competitors prospects compare you against, and how leads reach you today. No blame—just a clear picture of gaps and quick wins.",
+    body: "We review your current digital presence, analytics if you have them, competitors prospects compare you against, and how leads reach you today. No blame—just a clear picture of gaps and quick wins.",
     output:
       "A short findings summary: what to keep, what to fix, and what to build. You decide whether to move forward—no lock-in.",
   },
@@ -48,16 +47,16 @@ export const processPhases: ProcessPhase[] = [
   {
     id: "launch",
     title: "Launch",
-    body: "We handle DNS, hosting handoff, forms, tracking, and basic SEO checks. You get a simple go-live checklist and a short handoff so your team knows how to request changes.",
+    body: "We handle DNS, hosting handoff, forms, tracking, and baseline SEO checks. You get a simple go-live checklist and clarity on how ongoing requests flow inside your tier.",
     output:
       "Production launch with monitoring, backups, and documentation—not a quiet Friday deploy and a hope it holds.",
   },
   {
     id: "improve",
     title: "Improve",
-    body: "After launch we watch behavior and leads, then prioritize fixes and enhancements. Improvement is continuous but scheduled—backlog, not chaos.",
+    body: "After launch we watch behavior and leads, then prioritize fixes, SEO pages, and enhancements inside your monthly program. Improvement is continuous but scheduled—backlog, not chaos.",
     output:
-      "A standing rhythm: what we shipped, what we learned, what we tackle next. Optional retainer or scoped follow-on projects.",
+      "A standing rhythm: what we shipped, what we learned, what we tackle next—subscription partnership, not a disappearing vendor.",
   },
 ];
 
@@ -93,21 +92,21 @@ export const processBoundaries: {
 };
 
 export const processPageCta: ServicesCtaBlock = {
-  title: "Book a strategy call",
-  body: "Walk us through your services, markets, and what a strong lead looks like. If there is a fit, we will outline audit and strategy next steps—if not, we will say so clearly.",
-  primaryCta: { href: "/contact", label: "Book a strategy call" },
-  secondaryCta: { href: "/pricing", label: "Review investment" },
+  title: "Walk through your market and lead flow",
+  body: "Tell us your services, markets, and what a strong lead looks like. If there is a fit, we will outline audit and strategy next steps—if not, we will say so clearly.",
+  primaryCta: { href: "/contact", label: "Talk with us" },
+  secondaryCta: { href: "/pricing", label: "Review tiers" },
 };
 
 export const processStepsPreview: ProcessPreviewStep[] = [
   {
     title: "Audit",
     summary:
-      "Current state, gaps, and quick wins—before we commit to a build.",
+      "Presence, gaps, and quick wins—before we commit to scope.",
   },
   {
     title: "Strategy",
-    summary: "Sitemap, CTAs, and proof locked in a written plan.",
+    summary: "Structure, CTAs, and proof locked in a written plan.",
   },
   {
     title: "Build",
@@ -115,7 +114,7 @@ export const processStepsPreview: ProcessPreviewStep[] = [
   },
   {
     title: "Launch",
-    summary: "Go-live, checks, handoff—no quiet Friday deploys.",
+    summary: "Go-live, checks, documentation—then into the monthly program.",
   },
   {
     title: "Improve",

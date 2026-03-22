@@ -72,7 +72,10 @@ export default function HowItWorksPage() {
           </h2>
           <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
             {processBoundaries.items.map((item) => (
-              <li key={item.title} className={cn(card, "bg-zinc-950/35 p-5 sm:p-6")}>
+              <li
+                key={item.title}
+                className={cn(card, "bg-[#1c342c]/48 p-5 sm:p-6")}
+              >
                 <h3 className="text-sm font-semibold text-zinc-100">
                   {item.title}
                 </h3>

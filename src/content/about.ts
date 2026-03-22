@@ -3,15 +3,15 @@ import type { AboutBlurb, ContentPage, HomePoint, ServicesCtaBlock } from "./typ
 export const aboutPage: ContentPage = {
   title: "About",
   description:
-    "Zen/Iconic is a digital studio for service businesses that want calm, intentional web presence—clear story, credible design, and practical support as you grow.",
+    "Zen/Iconic partners with local service businesses on visibility, credibility, and lead capture—through digital infrastructure and ongoing support, not one-off website projects.",
 };
 
 export const aboutSeo = {
   keywords: [
-    "digital studio for service businesses",
-    "intentional web design",
-    "conversion-focused website",
-    "ongoing website partnership",
+    "digital growth partner for service businesses",
+    "ongoing digital presence support",
+    "local service lead capture",
+    "subscription digital infrastructure",
   ],
 } as const;
 
@@ -19,8 +19,8 @@ export const aboutHero = {
   eyebrow: "Zen/Iconic",
   headline: "Calm execution. Clear stakes.",
   subhead:
-    "We help service operators turn their digital presence into a reliable asset—structured for how buyers decide, built to evolve with the business.",
-  primaryCta: { href: "/contact", label: "Start a conversation" },
+    "We help operators turn how they show up online into a dependable commercial layer—structured for how buyers decide, maintained as the business changes.",
+  primaryCta: { href: "/contact", label: "Talk with us" },
   secondaryCta: { href: "/how-it-works", label: "How we work" },
 } as const;
 
@@ -28,9 +28,9 @@ export const aboutMission = {
   kicker: "Mission & philosophy",
   title: "Design is how you reduce uncertainty",
   paragraphs: [
-    "Most service purchases start with doubt: Can they show up? Will they stand behind the work? Are we comparing apples to apples? A strong site does not shout over those questions—it answers them in order, with evidence, and without noise.",
-    "Zen/Iconic exists because that standard is still rare. We are not here to decorate pages. We are here to make decision-making easier for your prospects and lead flow more legible for your team.",
-    "That requires intentional design: hierarchy, restraint, and copy that sounds like your firm. It also requires business clarity—who you serve, what you sell, what proof matters—so the site reflects reality, not aspiration alone.",
+    "Most service purchases start with doubt: Can they show up? Will they stand behind the work? Are we comparing apples to apples? Strong digital presence does not shout over those questions—it answers them in order, with evidence, and without noise.",
+    "Zen/Iconic exists because that standard is still rare. We are not selling pages. We are accountable for how people find you, trust you, and reach you—and for keeping that layer honest as your offer and markets shift.",
+    "That takes intelligent design: hierarchy, restraint, and language that sounds like your firm. It also takes business clarity—who you serve, what you sell, what proof matters—so the surface matches how you actually operate.",
   ],
 } as const;
 
@@ -42,15 +42,15 @@ export const aboutDifferentiators: {
 } = {
   kicker: "Approach",
   title: "What makes this different",
-  lead: "You get a productized process, direct access, and scope tied to outcomes—not endless exploration billed by the hour.",
+  lead: "You get a clear process, direct access, and work tied to visibility and contact—not open-ended exploration billed by the hour.",
   items: [
     {
       title: "Structure before polish",
-      body: "We align on story, sitemap, and conversion paths before visual design absorbs the budget. You approve the skeleton, then we refine the surface.",
+      body: "We align on story, information architecture, and conversion paths before surface design absorbs the budget. You approve the skeleton, then we refine what people see and read.",
     },
     {
-      title: "Growth support, not handoff theater",
-      body: "Launch is not the finish line. We help you interpret behavior, fix friction, and extend the system when offers or markets shift.",
+      title: "Ongoing partnership, not a launch handoff",
+      body: "Go-live is the start of maintenance and improvement. We interpret behavior, fix friction, add pages, and adjust messaging as your business changes.",
     },
     {
       title: "Language you can use internally",
@@ -67,11 +67,11 @@ export const aboutAudience: {
 } = {
   kicker: "Fit",
   title: "Who this is for",
-  lead: "Teams that sell expertise, craft, or field service—where trust is earned before the contract and the website is doing real commercial work.",
+  lead: "Teams that sell expertise, craft, or field service—where trust is earned before the contract and how you show up online is doing real commercial work.",
   points: [
     {
       title: "Operators who care about margin and reputation",
-      text: "You want a site that reflects rigor, not trends. You are willing to invest once thoughtfully and improve on a rhythm—not chase redesigns every eighteen months.",
+      text: "You want presence that reflects rigor, not trends. You are willing to fund a modest foundation and a steady monthly program—not disappear after a one-time build.",
     },
     {
       title: "Leaders who want a partner, not a ticket queue",
@@ -86,14 +86,14 @@ export const aboutAudience: {
 
 export const aboutPageCta: ServicesCtaBlock = {
   title: "If that sounds like your world, say hello",
-  body: "Tell us what you do, where you operate, and what you need the site to accomplish. We will respond with a clear next step—or a candid no if we are not the right fit.",
-  primaryCta: { href: "/contact", label: "Get in touch" },
+  body: "Tell us what you do, where you operate, and what qualified demand looks like. We will respond with a clear next step—or a candid no if we are not the right fit.",
+  primaryCta: { href: "/contact", label: "Talk with us" },
   secondaryCta: { href: "/services", label: "What we deliver" },
 };
 
 /** Short philosophy strip on the homepage—links to /about. */
 export const aboutPhilosophyHome = {
   title: "Philosophy",
-  body: "We work with operators who treat reputation as an asset. The site should answer real buyer questions—in order, with evidence—then get out of the way of contact.",
+  body: "We are not here to sell you a website. We build and manage the digital layer that helps people find you, trust you, and reach you—then keep improving it as your business changes.",
   cta: { href: "/about", label: "About the studio" },
 } as const;

@@ -1,6 +1,7 @@
 import { site } from "@/content/site";
 import { cn } from "@/lib/cn";
 import {
+  heroAmbientSheen,
   kicker,
   pageIntroY,
   pageTitle,
@@ -10,6 +11,7 @@ import {
 } from "@/lib/marketing-styles";
 
 import { Container } from "../layout/Container";
+import { HeroLogoBackdrop } from "./HeroLogoBackdrop";
 
 type PageIntroProps = {
   title: string;
@@ -20,10 +22,18 @@ type PageIntroProps = {
 export function PageIntro({ title, description, className }: PageIntroProps) {
   return (
     <section
-      className={cn(sectionRule, surfaceBase, pageIntroY, className)}
+      className={cn(
+        "relative overflow-hidden",
+        sectionRule,
+        surfaceBase,
+        pageIntroY,
+        className,
+      )}
       aria-labelledby="page-title"
     >
-      <Container as="div">
+      <HeroLogoBackdrop />
+      <div className={heroAmbientSheen} aria-hidden />
+      <Container as="div" className="relative z-10">
         <p className={kicker}>{site.name}</p>
         <h1 id="page-title" className={cn("mt-4 max-w-3xl", pageTitle)}>
           {title}

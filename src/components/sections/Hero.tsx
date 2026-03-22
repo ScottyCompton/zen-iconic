@@ -2,11 +2,14 @@ import { MarketingButtonLink } from "@/components/ui/MarketingButtonLink";
 import { cn } from "@/lib/cn";
 import {
   displayHero,
+  heroAmbientSheen,
   kicker,
   proseLead,
   sectionRule,
   surfaceBase,
 } from "@/lib/marketing-styles";
+
+import { HeroLogoBackdrop } from "./HeroLogoBackdrop";
 
 type HeroProps = {
   eyebrow: string;
@@ -14,6 +17,8 @@ type HeroProps = {
   subhead: string;
   primaryCta: { href: string; label: string };
   secondaryCta: { href: string; label: string };
+  /** Prefetch logo for LCP (homepage). */
+  logoPriority?: boolean;
   className?: string;
 };
 
@@ -23,6 +28,7 @@ export function Hero({
   subhead,
   primaryCta,
   secondaryCta,
+  logoPriority = false,
   className,
 }: HeroProps) {
   return (
@@ -35,11 +41,9 @@ export function Hero({
       )}
       aria-labelledby="hero-heading"
     >
-      <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(16,185,129,0.12),transparent)]"
-        aria-hidden
-      />
-      <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-16 sm:px-8 sm:pb-24 sm:pt-20 lg:px-12 lg:pb-28 lg:pt-24">
+      <HeroLogoBackdrop priority={logoPriority} />
+      <div className={heroAmbientSheen} aria-hidden />
+      <div className="relative z-10 mx-auto max-w-6xl px-6 pb-20 pt-16 sm:px-8 sm:pb-24 sm:pt-20 lg:px-12 lg:pb-28 lg:pt-24">
         <p className={kicker}>{eyebrow}</p>
         <h1 id="hero-heading" className={cn("mt-5 max-w-3xl", displayHero)}>
           {headline}
