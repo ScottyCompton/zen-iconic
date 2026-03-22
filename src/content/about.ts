@@ -88,7 +88,7 @@ export const aboutPageCta: ServicesCtaBlock = {
   title: "Next step: a short conversation",
   body: "Tell us what you offer, where you operate, and how leads find you now. We will reply with what happens next—usually a brief call—or a clear pass if we are not the right fit.",
   primaryCta: { href: "/contact", label: "Talk with us" },
-  secondaryCta: { href: "/services", label: "What we do" },
+  secondaryCta: { href: "/what-we-do", label: "What we do" },
 };
 
 /** Short strip on the homepage—links to /about. */

@@ -41,7 +41,7 @@ export const homeServicesOverviewSection = {
   title: "How we help you win more work",
   subtitle:
     "Outdated, slow, or clunky sites cost real opportunities—especially on phones. We improve how you show up online, keep the site current, and make reaching you simple. The goal is more leads and customers, not a prettier brochure.",
-  cta: { href: "/services", label: "See what we do" },
+  cta: { href: "/what-we-do", label: "See what we do" },
 } as const;
 
 export const homeWhyItMatters: {

@@ -14,12 +14,15 @@ type ServiceFocusSectionProps = {
   area: ServicesFocusArea;
   index: number;
   className?: string;
+  /** Label above the bullet list (default: Outcomes). */
+  outcomesHeading?: string;
 };
 
 export function ServiceFocusSection({
   area,
   index,
   className,
+  outcomesHeading = "Outcomes",
 }: ServiceFocusSectionProps) {
   const muted = index % 2 === 1;
 
@@ -57,7 +60,7 @@ export function ServiceFocusSection({
           </div>
           <div className="lg:col-span-7">
             <p className="text-xs font-medium uppercase tracking-wider text-zinc-600">
-              Outcomes
+              {outcomesHeading}
             </p>
             <ul className="mt-4 space-y-4">
               {area.outcomes.map((line) => (

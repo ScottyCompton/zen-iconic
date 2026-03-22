@@ -70,7 +70,7 @@ export type HomePoint = {
   text: string;
 };
 
-/** Outcome-led area for the /services page (plain language, no jargon). */
+/** Outcome-led area for long-form marketing pages (plain language, no jargon). */
 export type ServicesFocusArea = {
   id: string;
   title: string;

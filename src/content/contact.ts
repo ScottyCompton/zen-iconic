@@ -20,7 +20,7 @@ export const contactCopy = {
 
 export const contactFormCopy = {
   footnote:
-    "Submissions are validated on the server. Connect Resend, Postmark, or your CRM inside the contact action when you are ready.",
+    "Submissions are sent securely from the server. Delivery uses Resend; the site owner must set RESEND_API_KEY (see .env.example).",
   placeholders: {
     name: "Alex Morgan",
     email: "you@company.com",

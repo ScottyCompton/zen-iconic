@@ -1,6 +1,13 @@
 "use server";
 
+import { Resend } from "resend";
+
+import { formatContactSubmissionEmail } from "@/lib/contact/formatSubmission";
 import type { ContactSubmissionPayload } from "@/lib/contact/types";
+
+const CONTACT_INBOX_DEFAULT = "zeniconic.business@gmail.com";
+
+const RESEND_MISSING = "RESEND_API_KEY_MISSING";
 
 export type ContactState = {
   ok: boolean;
@@ -33,24 +40,40 @@ function isValidOptionalWebsite(raw: string): boolean {
   }
 }
 
-/**
- * Send the validated payload to your stack. Example with Resend:
- *
- * import { Resend } from "resend";
- * const resend = new Resend(process.env.RESEND_API_KEY);
- * await resend.emails.send({
- *   from: "Zen/Iconic <onboarding@yourdomain.com>",
- *   to: process.env.CONTACT_INBOX!,
- *   replyTo: payload.email,
- *   subject: `Inquiry from ${payload.name}`,
- *   text: formatContactSubmissionEmail(payload), // @/lib/contact/formatSubmission
- * });
- */
+function contactInbox(): string {
+  const fromEnv = process.env.CONTACT_INBOX?.trim();
+  return fromEnv && fromEnv.length > 0 ? fromEnv : CONTACT_INBOX_DEFAULT;
+}
+
+function contactFrom(): string {
+  const fromEnv = process.env.CONTACT_FROM?.trim();
+  return (
+    fromEnv && fromEnv.length > 0
+      ? fromEnv
+      : "Zen/Iconic <onboarding@resend.dev>"
+  );
+}
+
 async function deliverContactSubmission(
   payload: ContactSubmissionPayload,
 ): Promise<void> {
-  void payload;
-  // Implement with Resend, Postmark, Slack, etc.
+  const apiKey = process.env.RESEND_API_KEY?.trim();
+  if (!apiKey) {
+    throw new Error(RESEND_MISSING);
+  }
+
+  const resend = new Resend(apiKey);
+  const { error } = await resend.emails.send({
+    from: contactFrom(),
+    to: [contactInbox()],
+    replyTo: payload.email,
+    subject: `Contact form: ${payload.name}`,
+    text: formatContactSubmissionEmail(payload),
+  });
+
+  if (error) {
+    throw new Error(error.message);
+  }
 }
 
 export async function submitContact(
@@ -92,11 +115,18 @@ export async function submitContact(
 
   try {
     await deliverContactSubmission(payload);
-  } catch {
+  } catch (err) {
+    if (err instanceof Error && err.message === RESEND_MISSING) {
+      return {
+        ok: false,
+        message:
+          "Email delivery is not configured yet. Add RESEND_API_KEY to the server environment (see .env.example), or write to zeniconic.business@gmail.com directly.",
+      };
+    }
     return {
       ok: false,
       message:
-        "Something went wrong while sending. Please try again or email us directly.",
+        "Something went wrong while sending. Please try again or email zeniconic.business@gmail.com directly.",
     };
   }
 

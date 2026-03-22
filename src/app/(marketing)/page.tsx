@@ -56,7 +56,7 @@ export default function HomePage() {
         items={homeValueProps}
       />
       <ServicesOverview
-        id="services"
+        id="what-we-do"
         title={homeServicesOverviewSection.title}
         subtitle={homeServicesOverviewSection.subtitle}
         cta={homeServicesOverviewSection.cta}
