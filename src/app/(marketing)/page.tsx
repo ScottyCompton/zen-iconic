@@ -22,6 +22,7 @@ import {
 import {
   CTASection,
   Hero,
+  IndustryStrip,
   IndustriesServed,
   PhilosophyBlock,
   PricingPreview,
@@ -47,6 +48,7 @@ export default function HomePage() {
         secondaryCta={homeHero.secondaryCta}
         logoPriority
       />
+      <IndustryStrip />
       <ValueStrip
         id="value"
         title={homeValueStripSection.title}

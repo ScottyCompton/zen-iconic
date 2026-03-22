@@ -33,3 +33,44 @@ body {
   background: rgba(190, 242, 100, 0.28);
   color: #0c1412;
 }
+
+@keyframes industry-strip-marquee {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-industry-strip-marquee {
+  animation: industry-strip-marquee 72s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-industry-strip-marquee {
+    animation: none;
+  }
+}
+
+/* Industry strip cards: zoom out on hover, ease back on mouseout — no overshoot easing */
+.industry-strip-card__image {
+  transform: scale(1.06);
+  transform-origin: center top;
+  transition:
+    transform 0.4s ease-out,
+    filter 0.4s ease-out;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .industry-strip-card:hover .industry-strip-card__image {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .industry-strip-card__image {
+    transform: scale(1);
+    transition: none;
+  }
+}

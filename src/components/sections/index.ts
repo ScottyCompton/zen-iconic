@@ -5,6 +5,11 @@ export { AboutMission } from "./AboutMission";
 export { CTASection } from "./CTASection";
 export { FeatureGrid } from "./FeatureGrid";
 export { Hero } from "./Hero";
+export {
+  getIndustryStripItems,
+  IndustryStrip,
+  type IndustryStripItem,
+} from "./industry-strip";
 export { IndustriesServed } from "./IndustriesServed";
 export { PageIntro } from "./PageIntro";
 export { PhilosophyBlock } from "./PhilosophyBlock";
