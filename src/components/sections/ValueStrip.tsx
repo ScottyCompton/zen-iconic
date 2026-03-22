@@ -2,17 +2,18 @@ import type { Feature } from "@/content/types";
 import { cn } from "@/lib/cn";
 import {
   eyebrowMuted,
-  proseBody,
+  headingSection,
   sectionRule,
-  surfaceSunken,
-  titleLead,
+  surfaceInk,
 } from "@/lib/marketing-styles";
 
 import { Container } from "../layout/Container";
 
 type ValueStripProps = {
   id?: string;
+  /** Small label above the headline (e.g. “How we think about the work”). */
   title: string;
+  /** Primary section heading. */
   subtitle?: string;
   items: Feature[];
   className?: string;
@@ -25,42 +26,53 @@ export function ValueStrip({
   items,
   className,
 }: ValueStripProps) {
+  const headingId = "value-strip-heading";
+
   return (
     <section
       id={id}
-      className={cn(
-        sectionRule,
-        surfaceSunken,
-        "py-16 sm:py-20",
-        className,
-      )}
-      aria-labelledby="value-strip-heading"
+      className={cn(sectionRule, surfaceInk, "py-20 sm:py-24", className)}
+      aria-labelledby={headingId}
     >
       <Container as="div">
-        <div className="max-w-2xl">
-          <h2 id="value-strip-heading" className={eyebrowMuted}>
-            {title}
-          </h2>
+        <header className="max-w-3xl">
           {subtitle ? (
-            <p className={cn("mt-3", titleLead)}>{subtitle}</p>
-          ) : null}
-        </div>
-        <ul className="mt-10 grid gap-8 divide-y divide-white/[0.06] md:mt-12 md:grid-cols-3 md:gap-10 md:divide-x md:divide-y-0 md:px-0">
+            <>
+              <p className={cn(eyebrowMuted, "text-zinc-500")}>{title}</p>
+              <h2 id={headingId} className={cn("mt-3", headingSection)}>
+                {subtitle}
+              </h2>
+            </>
+          ) : (
+            <h2 id={headingId} className={headingSection}>
+              {title}
+            </h2>
+          )}
+        </header>
+
+        <ul className="mt-14 grid gap-0 sm:mt-16 md:mt-20 md:grid-cols-3">
           {items.map((item, index) => (
             <li
               key={item.title}
-              className="pt-8 first:pt-0 md:pt-0 md:pl-10 md:first:pl-0"
+              className={cn(
+                "pt-12 first:pt-0",
+                "border-t border-white/[0.08] first:border-t-0",
+                "md:border-t-0 md:pt-0",
+                index > 0 && "md:border-l md:border-white/[0.08] md:pl-10 lg:pl-12",
+              )}
             >
               <span
-                className="font-mono text-[10px] font-medium tabular-nums text-emerald-500/80"
+                className="font-mono text-sm font-medium tabular-nums tracking-tight text-lime-400"
                 aria-hidden
               >
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-2 text-sm font-semibold text-zinc-50">
+              <h3 className="mt-4 text-base font-semibold leading-snug text-zinc-50 sm:text-lg">
                 {item.title}
               </h3>
-              <p className={cn("mt-2", proseBody)}>{item.description}</p>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-400 sm:text-base">
+                {item.description}
+              </p>
             </li>
           ))}
         </ul>

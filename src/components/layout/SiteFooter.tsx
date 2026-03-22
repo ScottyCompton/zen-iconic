@@ -4,7 +4,7 @@ import { layoutFooter } from "@/content/layout";
 import { navItems } from "@/content/navigation";
 import { site } from "@/content/site";
 import { cn } from "@/lib/cn";
-import { borderHairline, labelUpper, surfaceBase } from "@/lib/marketing-styles";
+import { borderHairline, labelUpper, surfaceInk } from "@/lib/marketing-styles";
 
 import { Container } from "./Container";
 
@@ -13,7 +13,7 @@ export function SiteFooter() {
 
   return (
     <footer
-      className={cn("mt-auto border-t", surfaceBase, borderHairline)}
+      className={cn("mt-auto border-t", surfaceInk, borderHairline)}
     >
       <Container as="div" className="py-16 sm:py-20">
         <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">

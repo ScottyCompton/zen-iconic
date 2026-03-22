@@ -8,6 +8,9 @@ import { cn } from "@/lib/cn";
 /** Page canvas — keep ring-offset in sync for focus visibility */
 export const surfaceCanvas = "bg-[#152922]";
 
+/** Deep ink band (principles strip, engagement preview, footer) */
+export const surfaceInk = "bg-[#0a0a0a]";
+
 export const borderHairline = "border-white/[0.09]";
 
 export const sectionRule = `border-b ${borderHairline}`;
