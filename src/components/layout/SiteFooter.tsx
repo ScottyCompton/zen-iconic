@@ -7,6 +7,7 @@ import { cn } from "@/lib/cn";
 import { borderHairline, labelUpper, surfaceInk } from "@/lib/marketing-styles";
 
 import { Container } from "./Container";
+import { SocialFooterLinks } from "./SocialFooterLinks";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -65,6 +66,7 @@ export function SiteFooter() {
                   </Link>
                 </li>
               </ul>
+              <SocialFooterLinks links={layoutFooter.social} />
             </div>
             <div className="col-span-2 sm:col-span-1">
               <p className={labelUpper}>{layoutFooter.columns.colophon}</p>

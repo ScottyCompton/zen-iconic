@@ -1,45 +1,47 @@
 import type { Feature, HomePoint } from "./types";
 
 export const homePageTitle =
-  "Growth, presence, and leads for local service businesses" as const;
+  "More customers online for local and growing businesses" as const;
 
 export const homeHero = {
-  eyebrow: "Zen/Iconic",
-  headline: "More customers. Clearer presence. Ongoing support.",
+  eyebrow:
+    "For locally operated businesses that rely on being found and chosen online",
+  headline: "Business powered by intelligent design",
   subhead:
-    "We help local service businesses win work through better visibility, credibility, and lead capture. The site is infrastructure—we build and manage the whole digital layer so people can find you, trust you, and reach you without friction.",
-  primaryCta: { href: "/contact", label: "Talk with us" },
-  secondaryCta: { href: "/how-it-works", label: "How we work" },
+    "We help small and medium-sized local businesses get more customers by improving their online presence, building and managing their website, and making it easier for people to find and contact them.",
+  primaryCta: { href: "/contact", label: "Book a Strategy Call" },
+  secondaryCta: { href: "/how-it-works", label: "See How It Works" },
 } as const;
 
 export const homeValueStripSection = {
-  title: "How we think about the work",
-  subtitle: "Three principles that shape every relationship.",
+  title: "What Zen/Iconic does for you",
+  subtitle:
+    "More visibility, more leads, and more customers—without you running the website yourself.",
 } as const;
 
 export const homeValueProps: Feature[] = [
   {
-    title: "Demand first",
+    title: "We build and run the digital side",
     description:
-      "We start from who you need to reach and how they choose a provider—not from page templates. Clarity beats decoration when the goal is booked work.",
+      "You focus on estimates, crews, and appointments. We handle the site customers see first: structure, speed on phones, forms, hosting, and fixes—on an ongoing subscription, not a one-time handoff.",
   },
   {
-    title: "Presence that converts",
+    title: "Easier to find, easier to contact",
     description:
-      "Search, maps, and referrals send people to one place. We keep that presence accurate, fast, and easy to act on so interest turns into contact.",
+      "A clear, modern site with obvious phone, text, or form paths turns more visitors into calls and leads. We keep that path working as your services and area change.",
   },
   {
-    title: "Partnership, not handoff",
+    title: "Ongoing updates—not set and forget",
     description:
-      "Most operators need ongoing help: updates, new offers, SEO pages, fixes, and judgment calls. We stay in the loop so your digital side keeps pace with the business.",
+      "Most small businesses need steady updates and support. Your monthly plan covers improvements, new pages when they help search, and someone to call when something breaks.",
   },
 ];
 
 export const homeServicesOverviewSection = {
-  title: "What we run with you",
+  title: "How we help you win more work",
   subtitle:
-    "A single engagement covers the systems prospects touch before they call—messaging, surfaces, capture, hosting, and steady improvement. Not a brochure project.",
-  cta: { href: "/services", label: "See how it breaks down" },
+    "Outdated, slow, or clunky sites cost real opportunities—especially on phones. We improve how you show up online, keep the site current, and make reaching you simple. The goal is more leads and customers, not a prettier brochure.",
+  cta: { href: "/services", label: "See what we do" },
 } as const;
 
 export const homeWhyItMatters: {
@@ -47,47 +49,47 @@ export const homeWhyItMatters: {
   lead: string;
   points: HomePoint[];
 } = {
-  title: "What an outdated presence actually costs",
-  lead: "When listings are thin, the story is vague, or contact is buried, people do not argue—they hire someone else. That cost shows up as fewer calls, not as a line item.",
+  title: "An old or hard-to-use website costs you customers",
+  lead: "People judge your business by your website before they ever call. Many locally operated businesses lose leads because the site feels dated, loads slowly, or is frustrating on a phone—not because what you offer is weak.",
   points: [
     {
-      title: "Visibility and credibility move together",
-      text: "If you are hard to parse or slow to load on a phone, you read as less established than a competitor who is not.",
+      title: "Customers decide fast",
+      text: "If the site looks neglected, they assume the service might be too. Clear offers, proof, and contact options build trust in seconds.",
     },
     {
-      title: "One-time builds go stale",
-      text: "Services change, seasons change, and search behavior changes. Without a partner, the asset that was “done” quietly stops representing how you operate today.",
+      title: "Phones are where the search happens",
+      text: "Most searches for a local provider start on a phone. Tiny text, broken buttons, or buried phone numbers send people to the next name on the list.",
     },
     {
-      title: "You need a system, not a PDF",
-      text: "We build and manage digital infrastructure—pages, forms, tracking, hosting, updates—so discovery and contact stay reliable month to month.",
+      title: "You should not be fixing the website",
+      text: "Zen/Iconic manages the public digital side so you are not chasing hosting, plugins, or form errors. You run the business; we keep the front door open.",
     },
   ],
 };
 
 export const homeProcessSection = {
-  title: "How engagement runs",
+  title: "How we work with you",
   subtitle:
-    "Audit, plan, build, launch, then improve on a rhythm. You always know what we are doing and why.",
-  cta: { href: "/how-it-works", label: "See each phase" },
+    "We start with how you get customers today, then build and launch a solid foundation and keep improving on a schedule—subscription-based support aimed at more visibility, leads, and repeat business.",
+  cta: { href: "/how-it-works", label: "See each step" },
 } as const;
 
 export const homeIndustriesSection = {
-  cta: { href: "/contact", label: "Talk about your trade" },
+  cta: { href: "/contact", label: "Book a Strategy Call" },
 } as const;
 
 export const homePricingPreviewSection = {
-  title: "Subscription-based partnership",
+  title: "Setup fee plus monthly partnership",
   subtitle:
-    "Modest onboarding, then a fixed monthly program—hosting, updates, SEO pages, improvements, and support. Tiers scale with how much capacity you need.",
-  cta: { href: "/pricing", label: "Compare tiers" },
+    "Launch, Growth, and Momentum pair a one-time setup with a monthly subscription—hosting, updates, SEO pages, and support so your online presence keeps working. Example: Launch from $400 setup and $50 per month.",
+  cta: { href: "/pricing", label: "Compare plans" },
   footnote:
-    "Fees are confirmed in writing before work starts. This is structured as growth infrastructure, not a one-off quote for pages.",
+    "Ongoing partnership, not a one-off website sale. Pricing is confirmed in writing before work starts.",
 } as const;
 
 export const homeCta = {
-  title: "If growth depends on how you show up online, we should talk",
-  body: "Share what you do, where you operate, and how leads arrive today. We will be direct about fit, tier, and what a sensible first 90 days looks like.",
-  primaryCta: { href: "/contact", label: "Talk with us" },
+  title: "Ready for more visibility and customers?",
+  body: "Tell us what you do, where you work, and how people find you today. Book a strategy call—we will respond with a clear next step or an honest no if we are not the right fit.",
+  primaryCta: { href: "/contact", label: "Book a Strategy Call" },
   secondaryCta: { href: "/pricing", label: "View pricing" },
 } as const;

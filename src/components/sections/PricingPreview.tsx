@@ -82,13 +82,13 @@ export function PricingPreview({
               </p>
               <div className="mt-4 space-y-2 border-t border-white/[0.06] pt-4 text-xs">
                 <p>
-                  <span className="text-zinc-600">Setup </span>
+                  <span className="text-zinc-600">Setup fee </span>
                   <span className="font-medium text-zinc-200">
                     {tier.setup ?? "—"}
                   </span>
                 </p>
                 <p>
-                  <span className="text-zinc-600">Ongoing </span>
+                  <span className="text-zinc-600">Monthly </span>
                   <span className="font-medium text-zinc-200">
                     {tier.monthly ?? "—"}
                   </span>

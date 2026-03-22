@@ -16,10 +16,17 @@ import { HeroLogoBackdrop } from "./HeroLogoBackdrop";
 type PageIntroProps = {
   title: string;
   description: string;
+  /** Optional extra body paragraphs (same typography as description). */
+  additionalParagraphs?: readonly string[];
   className?: string;
 };
 
-export function PageIntro({ title, description, className }: PageIntroProps) {
+export function PageIntro({
+  title,
+  description,
+  additionalParagraphs,
+  className,
+}: PageIntroProps) {
   return (
     <section
       className={cn(
@@ -39,6 +46,14 @@ export function PageIntro({ title, description, className }: PageIntroProps) {
           {title}
         </h1>
         <p className={cn("mt-4 max-w-2xl", proseBody)}>{description}</p>
+        {additionalParagraphs?.map((paragraph, index) => (
+          <p
+            key={index}
+            className={cn("mt-4 max-w-2xl", proseBody)}
+          >
+            {paragraph}
+          </p>
+        ))}
       </Container>
     </section>
   );

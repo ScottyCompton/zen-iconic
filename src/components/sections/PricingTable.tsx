@@ -69,8 +69,8 @@ export function PricingTable({ tiers, footnote, className }: PricingTableProps) 
               <p className={cn("mt-3", proseBody)}>{tier.description}</p>
 
               <div className="grid grid-cols-2 gap-3">
-                <PriceBlock label="Setup" value={tier.setup} />
-                <PriceBlock label="Ongoing" value={tier.monthly} />
+                <PriceBlock label="Setup fee" value={tier.setup} />
+                <PriceBlock label="Monthly" value={tier.monthly} />
               </div>
               {tier.billingNote ? (
                 <p className="mt-3 text-xs leading-relaxed text-zinc-600">

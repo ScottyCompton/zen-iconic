@@ -1,30 +1,30 @@
 import type { Industry } from "./types";
 
 export const industriesIntro: { headline: string; supporting: string } = {
-  headline: "Local proof, local urgency",
+  headline: "Common ways local businesses show up online",
   supporting:
-    "Trades, clinics, and field services all face different compliance and buying habits. The constant is simple: people need to find you, believe you, and reach you without friction.",
+    "Every business is different, but most need the same baseline: a site that looks credible on a phone, loads quickly, and makes calling or booking obvious. The patterns below are examples—not an exhaustive list. If you serve customers locally and care about leads, we can usually map you to a sensible approach.",
 };
 
 export const industries: Industry[] = [
   {
     slug: "home-services",
-    title: "Home services & trades",
+    title: "Home & on-site services",
     context:
-      "Emergency calls, seasonal demand, and tight local comparison. Searchers scan for coverage, licenses, and a fast path to contact.",
+      "Urgent requests, busy seasons, and side-by-side comparisons on a phone. People scan for service area, credentials, and a fast way to call or book.",
     priorities: [
-      "Service-area clarity and dispatch-friendly contact",
-      "Proof up front: reviews, guarantees, crew credibility",
-      "Mobile speed for on-the-go searches",
+      "Clear coverage map or area list and dispatch-friendly contact",
+      "Proof up front: reviews, guarantees, team photos where it helps",
+      "Mobile speed for people searching on the go",
     ],
   },
   {
     slug: "professional-services",
     title: "Professional & advisory",
     context:
-      "Longer consideration and higher trust. Prospects read for fit, process, and who actually does the work before they book time.",
+      "Longer consideration. Prospects read for fit, process, and who does the work before they book a consult.",
     priorities: [
-      "Plain-language authority—no jargon as a substitute for substance",
+      "Clear authority—plain language, not buzzwords",
       "Intake that states who you help and what happens next",
       "Structure that supports referrals and search over time",
     ],
@@ -33,33 +33,33 @@ export const industries: Industry[] = [
     slug: "health-wellness",
     title: "Health & wellness",
     context:
-      "Sensitivity around outcomes and privacy. Visitors need calm layout, transparent scope, and a human path to reach you.",
+      "Visitors care about outcomes and privacy. They need a calm layout, honest scope, and an easy path to reach you.",
     priorities: [
-      "Accessible language and a steady visual hierarchy",
-      "Flows that reduce back-and-forth for appointments or inquiries",
-      "Policies and forms placed where they belong—not hidden",
+      "Readable copy and a steady visual hierarchy",
+      "Flows that cut back-and-forth for appointments or questions",
+      "Policies and forms where people expect them—not buried",
     ],
   },
   {
     slug: "b2b-specialty",
-    title: "B2B specialty contractors",
+    title: "B2B & commercial specialty",
     context:
-      "Technical buyers validate fit quickly: capabilities, safety, certifications, and how procurement will engage you.",
+      "Buyers check capabilities, safety, certifications, and how procurement will work with you—often on a tight timeline.",
     priorities: [
-      "Capability depth that matches how RFPs are written",
-      "Proof stacks: logos, project classes, outcomes where you can share them",
-      "Contact paths sized to deal type—from spec to enterprise",
+      "Depth that matches how bids and specs are written",
+      "Proof: logos, project types, outcomes you can share",
+      "Contact paths sized to the deal—from quick spec to larger contract",
     ],
   },
   {
     slug: "local-multi-location",
     title: "Multi-location operators",
     context:
-      "Brand consistency with local relevance. Each market needs its own signals without splintering the parent story.",
+      "One brand, many markets. Each location needs local signals without breaking the parent story.",
     priorities: [
-      "Templates for location and service variants without duplicate chaos",
-      "Central brand, local proof and contact",
-      "Crawl-friendly structure as footprint grows",
+      "Templates for location and service pages without duplicate mess",
+      "Central brand voice, local proof and phone numbers",
+      "Site structure that stays crawl-friendly as you grow",
     ],
   },
 ];

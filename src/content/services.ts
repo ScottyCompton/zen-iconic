@@ -8,17 +8,17 @@ import type {
 export const servicesPage: ContentPage = {
   title: "Services",
   description:
-    "Zen/Iconic helps local service businesses grow demand through digital presence, lead capture, and ongoing support—the public-facing layer is infrastructure, not the product.",
+    "Zen/Iconic helps local small and medium-sized businesses—especially service-based and professional services firms—get more customers by strengthening online presence, building and managing the website, and making contact simple. This is ongoing digital presence and growth support—not a one-time website handoff. A setup fee gets your foundation live; the monthly subscription covers hosting, updates, SEO pages, improvements, and support.",
 };
 
 /** SEO helpers — keep phrases natural; avoid stuffing. */
 export const servicesSeo = {
   keywords: [
-    "local service business digital presence",
-    "lead capture and online visibility",
-    "ongoing digital infrastructure support",
-    "SEO pages for contractors",
-    "managed hosting and updates",
+    "local SMB more leads online",
+    "managed website small business",
+    "online presence monthly support",
+    "help customers find local business",
+    "website and SEO for local business",
   ],
 } as const;
 
@@ -26,115 +26,115 @@ export const servicesSeo = {
 export const servicesFocusAreas: ServicesFocusArea[] = [
   {
     id: "website-systems",
-    title: "Digital presence",
+    title: "Website & how you show up online",
     promise:
-      "One credible, fast surface where search, referrals, and ads land—readable on a phone in a truck and serious on a desktop in an office.",
+      "One place where Google, maps, referrals, and ads should send people—fast on a phone, easy to read, obvious how to reach you.",
     outcomes: [
-      "Structure that matches how buyers scan: who you help, what you do, proof, then contact.",
-      "Pages and components you can extend when you add services, crews, or regions—without starting over.",
-      "Performance and accessibility treated as standard, not an add-on line item.",
+      "Pages organized the way customers think: who you serve, what you do, proof, then call or form.",
+      "Room to add services or areas without starting over.",
+      "Speed and mobile usability treated as standard—because that is how people choose a local business on a phone.",
     ],
   },
   {
     id: "lead-capture",
-    title: "Lead capture",
+    title: "More calls and form leads",
     promise:
-      "More conversations with the right prospects—fewer dead ends, fewer forms abandoned halfway through.",
+      "Fewer visitors leave without contacting you—paths that match urgent needs, estimates, consults, or callbacks.",
     outcomes: [
-      "Calls-to-action matched to intent: emergency service vs. planned project vs. partnership.",
-      "Forms and routing that land in the inbox or CRM your team already checks.",
-      "Trust placed where doubt usually appears: licenses, coverage area, timelines, guarantees.",
+      "Clear next steps for each kind of job, not one buried contact link.",
+      "Forms and notifications going where your office already looks.",
+      "Trust details—licenses, area, guarantees—where skepticism usually hits.",
     ],
   },
   {
     id: "hosting-support",
-    title: "Hosting & support",
+    title: "Hosting & day-to-day support",
     promise:
-      "Your digital layer stays live, fast, and patched—so a broken form or slow page is not how you find out something failed.",
+      "Your site stays live and working. Problems get fixed without you becoming the help desk.",
     outcomes: [
-      "Managed hosting appropriate to the stack we ship—no mystery servers on your personal card.",
-      "Security updates and monitoring handled as part of the relationship, not ad-hoc panic fixes.",
-      "A direct line when something breaks: reproduce, diagnose, ship a fix, document what changed.",
+      "Hosting suited to what we build—no surprise bills on a personal card you forgot about.",
+      "Updates and monitoring as part of the relationship.",
+      "When something breaks, we troubleshoot, fix it, and tell you what happened.",
     ],
   },
   {
     id: "seo-foundations",
-    title: "SEO foundations",
+    title: "Being found in local search",
     promise:
-      "Show up when people search the way your market actually phrases the problem—not just for vanity rankings.",
+      "Structure and content aimed at how your customers actually search—not vanity metrics.",
     outcomes: [
-      "Clean indexation: sensible URLs, titles, and internal links that reflect your services and locations.",
-      "Content structure that supports the phrases buyers use, without gimmicky keyword pages.",
-      "Analytics and event wiring so you can see which pages and sources produce real inquiries.",
+      "Sensible URLs, titles, and links across services and locations.",
+      "Pages aligned with real search phrases, without spammy tricks.",
+      "Simple reporting on what drives visits and inquiries.",
     ],
   },
   {
     id: "ongoing-growth",
-    title: "Ongoing growth",
+    title: "Ongoing improvements (monthly)",
     promise:
-      "Your business will change; presence and capture should keep pace—measured iteration inside a monthly program instead of a redesign every few years.",
+      "Your offers and market change; we keep tuning the digital side so it keeps bringing customers—not a redesign every five years.",
     outcomes: [
-      "A prioritized backlog from behavior and feedback: fix friction, add pages, refine messaging.",
-      "New offers, locations, or campaigns get templates—not one-off hacks that do not scale.",
-      "Regular checkpoints on traffic, leads, and what to improve next quarter.",
+      "A shared list of fixes and upgrades driven by leads, traffic, and your priorities.",
+      "New services, areas, or promotions get proper pages—not one-off hacks.",
+      "Regular check-ins on what to improve next.",
     ],
   },
 ];
 
 export const servicesMidCta: ServicesCtaBlock = {
-  title: "If this matches how you operate, we should talk",
-  body: "Send your current presence, your service area, and what a qualified lead looks like. We will reply with an honest fit conversation and, if it makes sense, a written scope—not a generic capabilities deck.",
+  title: "Want more customers from how you show up online?",
+  body: "Send your current site (if you have one), your service area, and what a good lead looks like. We will reply with a straight conversation and, if it fits, clear scope—not a generic deck.",
   primaryCta: { href: "/contact", label: "Talk with us" },
-  secondaryCta: { href: "/pricing", label: "See tiers" },
+  secondaryCta: { href: "/pricing", label: "See setup + monthly plans" },
 };
 
 export const servicesFinalCta: ServicesCtaBlock = {
-  title: "Ready for digital infrastructure you do not have to babysit",
-  body: "We work with service brands that care about reputation and margin. If that is you, start with a short note—we will keep the next step clear.",
+  title: "We partner long-term on your digital side",
+  body: "Setup fee plus monthly subscription: we keep your online presence and website working for calls and customers. Send a short note—we will tell you the next step.",
   primaryCta: { href: "/contact", label: "Talk with us" },
-  secondaryCta: { href: "/how-it-works", label: "How we work" },
+  secondaryCta: { href: "/how-it-works", label: "How it works" },
 };
 
 /** Compact cards used on the homepage services overview. */
 export const services: Service[] = [
   {
-    title: "Clarity & narrative",
+    title: "Clear offer & proof",
     summary:
-      "Sharpen how you describe the work, who it is for, and what proof matters—so prospects understand why you before they ever call.",
+      "Say plainly who you help, what you do, and why to trust you—so the right people call and fewer tire-kickers waste your time.",
     bullets: [
-      "Offer structure and on-page story",
-      "Proof and credential placement",
-      "Language that reads like your firm, not a template",
+      "Services and areas spelled out on the right pages",
+      "Reviews, licenses, and credentials where they help close trust",
+      "Language that sounds like your business, not generic filler",
     ],
   },
   {
-    title: "Presence & discovery",
+    title: "Where customers land",
     summary:
-      "The public layer people land on from search and referrals—fast, credible, and structured for how local buyers decide.",
+      "The site people see from search and referrals—quick to load, easy on a phone, structured for how local customers choose a provider.",
     bullets: [
-      "Clear information architecture and mobile-first reading",
-      "Components that extend when you add services or regions",
-      "Performance and accessibility as defaults",
+      "Simple navigation and scannable pages",
+      "Structure that grows when you add work or territory",
+      "Performance that does not cost you mobile leads",
     ],
   },
   {
-    title: "Lead capture",
+    title: "Calls and leads",
     summary:
-      "Contact paths and forms aligned to how people hire you: emergencies, estimates, consults, callbacks.",
+      "Phone, text, and forms set up for how people actually reach you—urgent requests, quotes, consults, or follow-up.",
     bullets: [
-      "CTAs by intent, not one generic button",
-      "Routing to inbox or CRM your team uses",
-      "Trust placed where skepticism usually appears",
+      "Obvious contact paths by intent",
+      "Routing to email or tools your team checks",
+      "Trust signals where people hesitate",
     ],
   },
   {
-    title: "Ongoing partnership",
+    title: "Monthly partnership",
     summary:
-      "Inside the monthly program: updates, SEO pages, improvements, and support—prioritized by what affects visibility and contact.",
+      "Under the subscription: hosting, updates, SEO pages, fixes, and steady improvements tied to leads and visibility.",
     bullets: [
-      "Backlog tied to leads and traffic—not random redesigns",
-      "Room to adapt when offers or markets shift",
-      "Rhythm for what to ship next, with plain-language reporting",
+      "Priorities driven by customers and results, not random redesigns",
+      "Flex when your business or market shifts",
+      "Plain updates on what we shipped and what is next",
     ],
   },
 ];

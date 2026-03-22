@@ -1,20 +1,20 @@
 export const contactPage = {
   title: "Contact",
   description:
-    "Reach Zen/Iconic about visibility, lead flow, or ongoing digital support for your service business. We reply within one business day with a clear next step.",
+    "Start a conversation with Zen/Iconic about more calls and leads, your online presence, or our Launch, Growth, and Momentum plans (setup plus monthly). We reply within one business day with a clear next step.",
 } as const;
 
 export const contactSeo = {
   keywords: [
-    "contact digital growth partner",
-    "local service business marketing help",
-    "ongoing digital presence support",
+    "contact zen iconic local business",
+    "help with website and leads",
+    "managed online presence partner",
   ],
 } as const;
 
 export const contactCopy = {
-  headline: "Tell us what you are trying to improve",
-  body: "If presence feels behind the business, leads arrive in spikes you cannot trace, or prospects drop before they call—send a short note. We work with operators who want a calmer, more legible path from discovery to contact.",
+  headline: "Tell us about your business",
+  body: "If you want more calls and customers from how you show up online—or your site feels outdated or hard to use—we should talk. We work with local businesses on ongoing digital presence: setup fee plus monthly subscription, not a one-time project and silence.",
   directLabel: "Prefer email?",
 } as const;
 
@@ -24,10 +24,10 @@ export const contactFormCopy = {
   placeholders: {
     name: "Alex Morgan",
     email: "you@company.com",
-    company: "Company or trade name",
+    company: "Company or business name",
     website: "yoursite.com or leave blank",
     message:
-      "What you do, where you operate, and what you want leads or reputation to look like in six months.",
+      "What you do, where you work, how customers find you today, and what more leads would mean for you.",
   },
   labels: {
     name: "Name",

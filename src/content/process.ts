@@ -9,15 +9,15 @@ import type {
 export const processPage: ContentPage = {
   title: "How it works",
   description:
-    "From audit through launch and into an ongoing improvement rhythm: fixed phase outputs, bounded design rounds, and plain-language checkpoints—so you always know what is happening next.",
+    "For locally operated businesses that want more leads and a stronger online presence: we start with how customers find you today, build and launch your digital foundation, then keep working month to month—hosting, updates, SEO pages, and support—so you get more visibility, calls, and inquiries. Clear steps, plain language, not a one-and-done website project.",
 };
 
 export const processSeo = {
   keywords: [
-    "digital growth process for service businesses",
-    "audit to launch timeline",
-    "ongoing digital presence support",
-    "subscription partnership workflow",
+    "how zen iconic works",
+    "local business website onboarding",
+    "monthly website partner process",
+    "managed online presence SMB",
   ],
 } as const;
 
@@ -26,37 +26,37 @@ export const processPhases: ProcessPhase[] = [
   {
     id: "audit",
     title: "Audit",
-    body: "We review your current digital presence, analytics if you have them, competitors prospects compare you against, and how leads reach you today. No blame—just a clear picture of gaps and quick wins.",
+    body: "We look at your current site and listings, how leads find you, and who you are up against locally. No blame—just a clear picture of what is costing you calls and what to fix first.",
     output:
-      "A short findings summary: what to keep, what to fix, and what to build. You decide whether to move forward—no lock-in.",
+      "A short summary: keep, fix, build. You decide whether to move forward—no obligation.",
   },
   {
-    id: "strategy",
-    title: "Strategy",
-    body: "We agree on ideal clients, service priorities, proof to show, and the exact actions you want visitors to take. Structure and messaging are nailed down before we invest in visual polish.",
+    id: "plan",
+    title: "Plan",
+    body: "We agree on your ideal customer, top services, proof to show, and what you want someone to do on the site—usually call, book, or submit a form. Structure and messaging come before we finalize every page detail.",
     output:
-      "A written plan: sitemap, key pages, primary CTAs, and content responsibilities. That document is the scope guardrail for the build.",
+      "A written plan: main pages, priorities, and contact goals. That guides the build so scope stays clear.",
   },
   {
     id: "build",
     title: "Build",
-    body: "We implement in staged reviews—structure first, then design, then interaction. You see realistic pages early, so feedback is about substance, not surprise rework.",
+    body: "We put up real pages in stages—outline first, then customer-facing copy and layout, then forms and tracking. You see working pages early so feedback is about getting more customers, not last-minute surprises.",
     output:
-      "A staging site you can click through. Revisions are organized into agreed rounds so the loop stays finite and predictable.",
+      "A staging site you can click through. Revisions run in agreed rounds so the project finishes on time.",
   },
   {
     id: "launch",
     title: "Launch",
-    body: "We handle DNS, hosting handoff, forms, tracking, and baseline SEO checks. You get a simple go-live checklist and clarity on how ongoing requests flow inside your tier.",
+    body: "We go live: domain and hosting, forms, basic tracking, and SEO checks. You get a simple checklist and know how to reach us for anything that comes up.",
     output:
-      "Production launch with monitoring, backups, and documentation—not a quiet Friday deploy and a hope it holds.",
+      "Production site with backups and monitoring—plus handoff into your monthly support plan.",
   },
   {
     id: "improve",
     title: "Improve",
-    body: "After launch we watch behavior and leads, then prioritize fixes, SEO pages, and enhancements inside your monthly program. Improvement is continuous but scheduled—backlog, not chaos.",
+    body: "After launch we watch traffic and leads (as data allows), then ship fixes, new pages, and upgrades inside your monthly subscription. The goal stays the same: more findability, more trust, more contact.",
     output:
-      "A standing rhythm: what we shipped, what we learned, what we tackle next—subscription partnership, not a disappearing vendor.",
+      "A steady rhythm—what we did, what we learned, what is next—with us as your ongoing partner, not a vendor who disappears.",
   },
 ];
 
@@ -66,58 +66,58 @@ export const processSteps: Step[] = processPhases.map((p) => ({
 }));
 
 export const processNote: { title: string; body: string } = {
-  title: "What we are optimizing for",
-  body: "Predictable milestones, readable scope, and direct communication. You should never wonder which phase you are in or whether feedback will spiral without a ceiling.",
+  title: "What we care about",
+  body: "You should always know where we are in the process. Scope and feedback stay bounded so your time is protected and we keep momentum toward launch—and then toward more customers month by month.",
 };
 
 export const processBoundaries: {
   title: string;
   items: { title: string; text: string }[];
 } = {
-  title: "Revisions, tech, and scope",
+  title: "Feedback, tech, and scope",
   items: [
     {
-      title: "Bounded design rounds",
-      text: "Feedback is batched into agreed cycles during Build. That protects your calendar and our calendar—and keeps the project moving.",
+      title: "Rounded review cycles",
+      text: "During Build we batch feedback in agreed cycles. That keeps the schedule sane for you and for us.",
     },
     {
-      title: "Plain-language checkpoints",
-      text: "We explain hosting, DNS, and analytics in terms of outcomes you care about. You do not need to become a developer to ship confidently.",
+      title: "Plain-language explanations",
+      text: "Hosting, domain, and analytics are explained in terms of calls and leads—not developer jargon.",
     },
     {
-      title: "Scope tied to the strategy doc",
-      text: "New pages or features mid-build go through a quick change request so timeline and fee stay honest for everyone.",
+      title: "Scope follows the plan",
+      text: "Big new requests mid-build go through a quick change note so timeline and cost stay fair.",
     },
   ],
 };
 
 export const processPageCta: ServicesCtaBlock = {
-  title: "Walk through your market and lead flow",
-  body: "Tell us your services, markets, and what a strong lead looks like. If there is a fit, we will outline audit and strategy next steps—if not, we will say so clearly.",
+  title: "Tell us how customers find you today",
+  body: "Share what you offer, the markets you serve, and what a strong lead looks like. If we are a fit, we outline audit and plan next. If not, we will say so clearly.",
   primaryCta: { href: "/contact", label: "Talk with us" },
-  secondaryCta: { href: "/pricing", label: "Review tiers" },
+  secondaryCta: { href: "/pricing", label: "View pricing" },
 };
 
 export const processStepsPreview: ProcessPreviewStep[] = [
   {
     title: "Audit",
     summary:
-      "Presence, gaps, and quick wins—before we commit to scope.",
+      "Where you stand, gaps, and quick wins—before we commit.",
   },
   {
-    title: "Strategy",
-    summary: "Structure, CTAs, and proof locked in a written plan.",
+    title: "Plan",
+    summary: "Pages, messaging, and contact goals in writing.",
   },
   {
     title: "Build",
-    summary: "Staging reviews in rounds so feedback stays finite.",
+    summary: "Staging site and structured feedback rounds.",
   },
   {
     title: "Launch",
-    summary: "Go-live, checks, documentation—then into the monthly program.",
+    summary: "Go live, checks, then your monthly program.",
   },
   {
     title: "Improve",
-    summary: "Measure, prioritize, ship again on a steady rhythm.",
+    summary: "Keep tuning for visibility, calls, and leads.",
   },
 ];

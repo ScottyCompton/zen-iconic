@@ -4,6 +4,8 @@ import {
   pricingFaqs,
   pricingFaqSection,
   pricingFootnote,
+  pricingIntroParagraphs,
+  pricingMetaDescription,
   pricingPage,
   pricingPageCta,
   pricingSeo,
@@ -21,14 +23,14 @@ const ogTitle = `${pricingPage.title} | ${site.name}`;
 
 export const metadata: Metadata = {
   title: pricingPage.title,
-  description: pricingPage.description,
+  description: pricingMetaDescription,
   keywords: [...pricingSeo.keywords],
   alternates: {
     canonical: `${site.url}/pricing`,
   },
   openGraph: {
     title: ogTitle,
-    description: pricingPage.description,
+    description: pricingMetaDescription,
     url: `${site.url}/pricing`,
     siteName: site.name,
     type: "website",
@@ -47,6 +49,7 @@ export default function PricingPage() {
       <PageIntro
         title={pricingPage.title}
         description={pricingPage.description}
+        additionalParagraphs={pricingIntroParagraphs}
       />
       <PricingTable tiers={pricingTiers} footnote={pricingFootnote} />
       <PricingFaq title={pricingFaqSection.title} items={pricingFaqs} />
