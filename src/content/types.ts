@@ -27,20 +27,22 @@ export type Service = {
   bullets: string[];
 };
 
-export type PricingTier = {
-  name: string;
-  /** Short benefit headline. */
-  tagline: string;
+/** Home pricing strip — simplified setup + monthly snapshot. */
+export type PricingPreviewCard = {
+  title: string;
+  priceLine: string;
   description: string;
-  benefits: string[];
-  /** One-time / project setup (null if only monthly—rare). */
-  setup: string | null;
-  /** Recurring partnership (null for project-only tiers). */
-  monthly: string | null;
-  /** Clarifies billing, minimums, or transitions. */
-  billingNote?: string;
-  highlighted?: boolean;
-  cta: string;
+};
+
+export type PricingSetupBand = {
+  label: string;
+  pageRange: string;
+  price: string;
+};
+
+export type PricingAddOnRow = {
+  label: string;
+  price: string;
 };
 
 export type PricingFaqItem = {

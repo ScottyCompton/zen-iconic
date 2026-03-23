@@ -1,4 +1,4 @@
-import type { Feature, HomePoint } from "./types";
+import type { Feature, HomePoint, PricingPreviewCard } from "./types";
 
 export const homePageTitle =
   "More customers online for local and growing businesses" as const;
@@ -8,7 +8,7 @@ export const homeHero = {
     "For locally operated businesses that rely on being found and chosen online",
   headline: "Business powered by intelligent design",
   subhead:
-    "We help small and medium-sized local businesses get more customers by improving their online presence, building and managing their website, and making it easier for people to find and contact them.",
+    "Using the power of modern AI tools, we help small and medium-sized local businesses get more customers by improving their online presence, building and managing their website, and making it easier for people to find and contact them.",
   primaryCta: { href: "/contact", label: "Book a Strategy Call" },
   secondaryCta: { href: "/how-it-works", label: "See How It Works" },
 } as const;
@@ -79,13 +79,28 @@ export const homeIndustriesSection = {
 } as const;
 
 export const homePricingPreviewSection = {
-  title: "Setup fee plus monthly partnership",
+  title: "Simple setup, one monthly subscription",
   subtitle:
-    "Launch, Growth, and Momentum pair a one-time setup with a monthly subscription—hosting, updates, SEO pages, and support so your online presence keeps working. Example: Launch from $400 setup and $50 per month.",
-  cta: { href: "/pricing", label: "Compare plans" },
+    "A one-time rebuild priced from your page count, then $149 per month for hosting, maintenance, ZenLeads CRM Starter, updates, and ongoing improvements—with clear add-ons when you need more.",
+  cta: { href: "/pricing", label: "See full pricing" },
   footnote:
-    "Ongoing partnership, not a one-off website sale. Pricing is confirmed in writing before work starts.",
+    "Ongoing digital presence and growth support—not a launch-and-disappear project. Every engagement is confirmed in writing before work starts.",
 } as const;
+
+export const homePricingPreviewCards: readonly PricingPreviewCard[] = [
+  {
+    title: "One-time setup",
+    priceLine: "From $300",
+    description:
+      "Based on page count: small sites through very large builds, including rebuild, content transfer, forms, SEO basics, preview, revisions, and launch.",
+  },
+  {
+    title: "Monthly partnership",
+    priceLine: "$149 / month",
+    description:
+      "Hosting, security, monitoring, analytics, lead forms, ZenLeads CRM Starter, monthly content and landing page allowances, support, and continuous site improvements.",
+  },
+];
 
 export const homeCta = {
   title: "Ready for more visibility and customers?",

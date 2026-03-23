@@ -3,26 +3,26 @@ import type { Metadata } from "next";
 import {
   pricingFaqs,
   pricingFaqSection,
-  pricingFootnote,
   pricingIntroParagraphs,
   pricingMetaDescription,
+  pricingMetaTitle,
   pricingPage,
   pricingPageCta,
+  pricingPageSections,
   pricingSeo,
-  pricingTiers,
 } from "@/content/pricing";
 import { site } from "@/content/site";
 import {
   CTASection,
   PageIntro,
   PricingFaq,
-  PricingTable,
+  PricingPlanSections,
 } from "@/components/sections";
 
-const ogTitle = `${pricingPage.title} | ${site.name}`;
+const ogTitle = `${pricingMetaTitle} | ${site.name}`;
 
 export const metadata: Metadata = {
-  title: pricingPage.title,
+  title: pricingMetaTitle,
   description: pricingMetaDescription,
   keywords: [...pricingSeo.keywords],
   alternates: {
@@ -51,7 +51,7 @@ export default function PricingPage() {
         description={pricingPage.description}
         additionalParagraphs={pricingIntroParagraphs}
       />
-      <PricingTable tiers={pricingTiers} footnote={pricingFootnote} />
+      <PricingPlanSections data={pricingPageSections} />
       <PricingFaq title={pricingFaqSection.title} items={pricingFaqs} />
       <CTASection
         id="pricing-cta"

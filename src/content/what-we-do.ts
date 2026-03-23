@@ -14,7 +14,7 @@ export const whatWeDoPath = "/what-we-do" as const;
 export const whatWeDoPage: ContentPage = {
   title: "What we do",
   description:
-    "Zen/Iconic helps local businesses get more customers by improving online presence and making the lead funnel more effective. We build and manage the digital foundation that supports lead generation—not social media, ads, or full-service marketing.",
+    "Zen/Iconic leverages the power of modern AI tools and platforms such as OpenAI, Midjourney, Cursor and others to rapidly analyze,  build our and fine-tune your leads funnel. With these tools, we help local businesses get more customers by improving online presence and making the lead funnel more effective. We build and manage the digital foundation that supports lead generation—not social media, ads, or full-service marketing.",
 };
 
 export const whatWeDoHeroParagraphs: readonly string[] = [

@@ -1,4 +1,4 @@
-import type { PricingTier } from "@/content/types";
+import type { PricingPreviewCard } from "@/content/types";
 import { cn } from "@/lib/cn";
 import {
   card,
@@ -19,7 +19,9 @@ type PricingPreviewProps = {
   subtitle: string;
   footnote: string;
   cta: { href: string; label: string };
-  tiers: PricingTier[];
+  cards: readonly PricingPreviewCard[];
+  /** Index of the card to highlight (e.g. monthly plan). */
+  highlightIndex?: number;
   className?: string;
 };
 
@@ -29,7 +31,8 @@ export function PricingPreview({
   subtitle,
   footnote,
   cta,
-  tiers,
+  cards,
+  highlightIndex = 1,
   className,
 }: PricingPreviewProps) {
   return (
@@ -55,66 +58,22 @@ export function PricingPreview({
           </MarketingButtonLink>
         </div>
 
-        <div className="mt-12 grid gap-4 lg:grid-cols-3 lg:gap-5">
-          {tiers.map((tier) => (
+        <div className="mt-12 grid gap-4 lg:grid-cols-2 lg:gap-5">
+          {cards.map((cardItem, index) => (
             <article
-              key={tier.name}
+              key={cardItem.title}
               className={cn(
                 "flex flex-col p-6 sm:p-7",
-                tier.highlighted ? cardAccent : card,
+                index === highlightIndex ? cardAccent : card,
               )}
             >
-              <div className="flex items-baseline justify-between gap-2">
-                <h3 className="text-sm font-semibold text-zinc-50">
-                  {tier.name}
-                </h3>
-                {tier.highlighted ? (
-                  <span className="text-[10px] font-semibold uppercase tracking-wider text-emerald-400/90">
-                    Most chosen
-                  </span>
-                ) : null}
-              </div>
-              <p className="mt-2 text-xs font-medium leading-snug text-zinc-300">
-                {tier.tagline}
+              <h3 className="text-sm font-semibold text-zinc-50">{cardItem.title}</h3>
+              <p className="mt-3 text-lg font-semibold tracking-tight text-zinc-50">
+                {cardItem.priceLine}
               </p>
-              <p className="mt-2 flex-1 text-xs leading-relaxed text-zinc-500">
-                {tier.description}
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-zinc-400">
+                {cardItem.description}
               </p>
-              <div className="mt-4 space-y-2 border-t border-white/[0.06] pt-4 text-xs">
-                <p>
-                  <span className="text-zinc-600">Setup fee </span>
-                  <span className="font-medium text-zinc-200">
-                    {tier.setup ?? "—"}
-                  </span>
-                </p>
-                <p>
-                  <span className="text-zinc-600">Monthly </span>
-                  <span className="font-medium text-zinc-200">
-                    {tier.monthly ?? "—"}
-                  </span>
-                </p>
-              </div>
-              <ul className="mt-4 space-y-2">
-                {tier.benefits.slice(0, 2).map((line) => (
-                  <li
-                    key={line}
-                    className="flex gap-2 text-xs leading-relaxed text-zinc-400"
-                  >
-                    <span
-                      className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-zinc-600"
-                      aria-hidden
-                    />
-                    {line}
-                  </li>
-                ))}
-              </ul>
-              <MarketingButtonLink
-                href="/contact"
-                variant={tier.highlighted ? "primary" : "secondary"}
-                className="mt-6"
-              >
-                {tier.cta}
-              </MarketingButtonLink>
             </article>
           ))}
         </div>

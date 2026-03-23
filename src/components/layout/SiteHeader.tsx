@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import { layoutHeader } from "@/content/layout";
 import { navItems } from "@/content/navigation";
@@ -15,7 +18,16 @@ import {
 
 import { Container } from "./Container";
 
+function pathMatchesNavItem(pathname: string, href: string) {
+  if (href === "/") {
+    return pathname === "/";
+  }
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 export function SiteHeader() {
+  const pathname = usePathname();
+
   return (
     <header
       className={cn(
@@ -42,11 +54,23 @@ export function SiteHeader() {
           className="hidden items-center gap-7 md:flex"
           aria-label="Primary"
         >
-          {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className={navLink}>
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const active = pathMatchesNavItem(pathname, item.href);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={cn(
+                  navLink,
+                  active &&
+                    "text-zinc-50 shadow-[inset_0_-2px_0_0_rgba(163,230,53,0.5)] hover:text-zinc-50",
+                )}
+                aria-current={active ? "page" : undefined}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-3">
@@ -75,16 +99,25 @@ export function SiteHeader() {
               )}
             >
               <ul className="flex flex-col gap-0.5 py-1">
-                {navItems.map((item) => (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className="flex min-h-11 items-center rounded-xl px-3 text-sm text-zinc-300 transition-colors duration-200 hover:bg-white/[0.05] hover:text-zinc-50"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
+                {navItems.map((item) => {
+                  const active = pathMatchesNavItem(pathname, item.href);
+                  return (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        className={cn(
+                          "flex min-h-11 items-center rounded-xl px-3 text-sm transition-colors duration-200 hover:bg-white/[0.05] hover:text-zinc-50",
+                          active
+                            ? "bg-lime-400/8 text-zinc-50"
+                            : "text-zinc-300",
+                        )}
+                        aria-current={active ? "page" : undefined}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  );
+                })}
                 <li className="mt-1 border-t border-white/[0.06] pt-2">
                   <Link
                     href={layoutHeader.cta.href}

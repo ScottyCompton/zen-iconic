@@ -6,6 +6,7 @@ import {
   homeHero,
   homeIndustriesSection,
   homePageTitle,
+  homePricingPreviewCards,
   homePricingPreviewSection,
   homeProcessSection,
   homeServicesOverviewSection,
@@ -14,7 +15,6 @@ import {
   homeWhyItMatters,
   industries,
   industriesIntro,
-  pricingTiers,
   processStepsPreview,
   services,
   site,
@@ -88,7 +88,7 @@ export default function HomePage() {
         subtitle={homePricingPreviewSection.subtitle}
         footnote={homePricingPreviewSection.footnote}
         cta={homePricingPreviewSection.cta}
-        tiers={pricingTiers}
+        cards={homePricingPreviewCards}
       />
       <PhilosophyBlock
         id="philosophy"

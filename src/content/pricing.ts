@@ -1,132 +1,178 @@
 import type {
   ContentPage,
+  PricingAddOnRow,
   PricingFaqItem,
-  PricingTier,
+  PricingSetupBand,
   ServicesCtaBlock,
 } from "./types";
 
 /** Shorter line for meta / Open Graph (keep roughly under ~160 characters). */
 export const pricingMetaDescription =
-  "Setup fee plus monthly plans for local small and medium-sized businesses: we build your digital foundation and keep improving your online presence, SEO pages, and support—so you get more calls and leads. Long-term partner, not a one-time website project." as const;
+  "Simple transparent pricing: one-time website setup by page count, $149/mo subscription with hosting, maintenance, ZenLeads CRM Starter, and ongoing improvements—plus clear add-ons." as const;
+
+/** Short label for `<title>` and sharing cards (see `pricingPage.title` for the on-page H1). */
+export const pricingMetaTitle = "Pricing" as const;
 
 export const pricingPage: ContentPage = {
-  title: "Pricing",
+  title: "Simple pricing for a faster, smarter digital presence.",
   description:
-    "Zen/Iconic is not selling one-time website projects. We provide ongoing digital presence and growth support for locally operated businesses that want more leads and a clearer presence online: a setup fee to build your foundation, then a monthly subscription so we keep hosting, updating, and helping you show up where customers look. Every plan is Launch, Growth, or Momentum—and we stay involved after go-live.",
+    "Zen/Iconic keeps costs easy to follow: a one-time setup fee from your page count, one monthly subscription, and straightforward add-ons when you need more. You get rapid website rebuilds, hosting, maintenance, ongoing improvements, and lead tools—an ongoing digital presence, not a one-and-done brochure site.",
 };
 
 /** Extra intro copy shown under the first paragraph on /pricing only. */
 export const pricingIntroParagraphs = [
-  "The setup fee covers building your initial website and digital foundation: structure, customer-facing pages, launch, forms, and the basics so people can find and contact you.",
-  "The monthly fee covers hosting, updates, improvements, SEO pages as we add them, fixes, and support. Search habits, your offers, and competitors change; the subscription is how your online side keeps working for more calls and leads.",
-  "This is not just a website—it is ongoing help with how your business looks and performs online. Whether you run a service-based business, a professional practice, or another local SMB, most teams only need a few extra good opportunities per month for this to pay for itself. We intend to be a long-term partner managing that side of the business—not a vendor you only hear from when something breaks.",
+  "Small business owners should see the full picture quickly—what you pay once, what runs each month, and what costs extra if your needs grow.",
 ] as const;
 
 export const pricingSeo = {
   keywords: [
-    "local business website monthly cost",
-    "setup fee managed online presence",
-    "more leads local SMB",
+    "small business website pricing",
+    "managed website monthly subscription",
+    "website setup fee page count",
+    "ZenLeads CRM included",
     "ongoing website partner pricing",
   ],
 } as const;
 
-export const pricingTiers: PricingTier[] = [
-  {
-    name: "Launch",
-    tagline: "Modern foundation and a professional online presence",
-    description:
-      "For businesses that need a modern foundation and professional online presence—so customers can find you, trust what they see, and reach out without friction.",
-    setup: "$400",
-    monthly: "$50/mo",
-    billingNote:
-      "Best when you want the build and hosting handled, plus light ongoing help—without a heavy monthly change cadence.",
-    benefits: [
-      "Modern website build",
-      "Mobile optimization",
-      "Hosting",
-      "Contact forms",
-      "Basic SEO structure",
-      "Launch support",
-      "Minor updates",
-    ],
-    cta: "Discuss Launch",
-  },
-  {
-    name: "Growth",
-    tagline: "Ongoing improvements, SEO pages, and more visibility",
-    description:
-      "For businesses that want ongoing improvements, SEO pages, and visibility growth—more than a launch-and-leave site.",
-    setup: "$700",
-    monthly: "$100/mo",
-    billingNote:
-      "Includes everything in Launch, with more room each month for edits, new pages, and SEO work tied to how people search in your area.",
-    highlighted: true,
-    benefits: [
-      "Everything in Launch",
-      "Monthly updates and edits",
-      "New pages added over time",
-      "SEO and location pages",
-      "Analytics and performance tracking",
-      "Ongoing improvements",
-      "Priority support",
-    ],
-    cta: "Discuss Growth",
-  },
-  {
-    name: "Momentum",
-    tagline: "Lead generation, campaigns, and long-term expansion",
-    description:
-      "For businesses focused on long-term lead generation and expansion—we treat your online side as something to keep improving, not set and forget.",
-    setup: "$1,000",
-    monthly: "$200/mo",
-    billingNote:
-      "Everything in Growth, with the highest priority when you need changes and more capacity for pages, tests, and follow-through.",
-    benefits: [
-      "Everything in Growth",
-      "Landing pages for marketing campaigns",
-      "Ongoing optimization",
-      "Content and page expansion",
-      "Conversion improvements",
-      "Strategy and growth support",
-      "Highest priority support",
-    ],
-    cta: "Discuss Momentum",
-  },
-];
+export const pricingSetupSection = {
+  id: "pricing-setup",
+  title: "One-time setup fee",
+  bands: [
+    {
+      label: "Small Website",
+      pageRange: "1–5 pages",
+      price: "$300",
+    },
+    {
+      label: "Medium Website",
+      pageRange: "6–10 pages",
+      price: "$500",
+    },
+    {
+      label: "Large Website",
+      pageRange: "11–15 pages",
+      price: "$800",
+    },
+    {
+      label: "Very Large Website",
+      pageRange: "16+ pages",
+      price: "$50 per page over 15 pages",
+    },
+  ] as const satisfies readonly PricingSetupBand[],
+  includesTitle: "Setup includes",
+  includes: [
+    "AI-assisted website rebuild",
+    "Modern responsive layout",
+    "Content transfer from your existing site",
+    "AI-enhanced copy cleanup for SEO and professionalism",
+    "Contact form setup",
+    "Basic on-page SEO setup",
+    "Vercel deployment",
+    "Preview link for review",
+    "One round of revisions",
+    "Final launch and domain connection",
+  ] as const,
+  turnaroundNote:
+    "We aim for rapid turnaround—often as fast as one business day—depending on how quickly your content is ready and how complex the project is.",
+} as const;
+
+export const pricingSubscriptionSection = {
+  id: "pricing-monthly",
+  title: "Monthly subscription",
+  price: "$149",
+  cadence: "/month",
+  intro:
+    "One plan covers what most local businesses need to stay fast, secure, visible, and easy to contact—with room to grow.",
+  items: [
+    "Hosting",
+    "Maintenance",
+    "Security updates",
+    "Performance monitoring",
+    "Basic SEO improvements",
+    "Analytics tracking",
+    "Lead capture forms",
+    "ZenLeads CRM – Starter included",
+    "1 content update per month",
+    "1 new landing page per month",
+    "Image updates",
+    "Minor text edits",
+    "Technical support",
+    "Ongoing site improvements",
+  ] as const,
+  zenLeadsNote:
+    "Need more pipeline and automation? You can upgrade ZenLeads anytime as your CRM needs grow.",
+} as const;
+
+export const pricingAddOnsSection = {
+  id: "pricing-add-ons",
+  title: "Add-ons",
+  subtitle: "Transparent pricing when you want extra work outside your subscription.",
+  rows: [
+    { label: "Additional content update", price: "$40" },
+    { label: "Additional landing page", price: "$75" },
+    { label: "New website page", price: "$100" },
+    { label: "Blog post creation", price: "$50" },
+    { label: "SEO page optimization", price: "$75" },
+    { label: "Logo design or redesign", price: "$150" },
+    { label: "Copywriting per page", price: "$50" },
+    { label: "Domain/email setup", price: "$50" },
+    { label: "CRM or third-party integrations", price: "$100" },
+    { label: "Rush / same-day edits", price: "$50" },
+    { label: "ZenLeads upgrades", price: "Custom / varies by plan" },
+  ] as const satisfies readonly PricingAddOnRow[],
+} as const;
+
+export const pricingValueSection = {
+  id: "pricing-value",
+  title: "More than a website",
+  body: "Zen/Iconic is built for businesses that want momentum online—not a PDF and a handshake. We rebuild, launch, and keep improving how you show up, how fast you load, and how easy it is to become a lead.",
+  points: [
+    "Your subscription is structured to help you generate leads and keep the site current as your services and market change.",
+    "We treat your website as a living business asset: maintained, measured, and refined—not a project that goes quiet after launch.",
+  ] as const,
+} as const;
 
 export const pricingFootnote: string =
-  "Each tier is a one-time setup fee plus a monthly subscription. If scope or your situation is unusual, we confirm numbers in writing before work starts. Zen/Iconic is built to stay your partner on the digital side—not a one-time quote and goodbye.";
+  "Numbers are confirmed in writing before work begins. If scope or timing is unusual, we align on setup, subscription, and add-ons up front so there are no surprises.";
+
+/** Bundled props for the pricing page body component. */
+export const pricingPageSections = {
+  setup: pricingSetupSection,
+  subscription: pricingSubscriptionSection,
+  addOns: pricingAddOnsSection,
+  value: pricingValueSection,
+  footnote: pricingFootnote,
+} as const;
 
 export const pricingFaqSection = {
-  title: "Straight answers",
+  title: "Common questions",
 } as const;
 
 export const pricingFaqs: PricingFaqItem[] = [
   {
     question: "Is this only a website?",
     answer:
-      "Your website is the main thing customers see, but the service is ongoing: we host it, keep it current, add pages when it helps search and leads, fix problems, and support you month to month. The goal is a stronger online presence and more calls and form fills—not a brochure you are left to maintain alone.",
+      "Your site is the hub, but the service is ongoing: we host it, keep it secure and fast, improve it over time, capture leads, and include ZenLeads CRM Starter so inquiries are easier to track. The goal is a stronger digital presence and more qualified conversations—not a static brochure you maintain alone.",
   },
   {
     question: "What does the setup fee cover vs. the monthly fee?",
     answer:
-      "Setup is one-time: building your initial site and digital foundation—planning, pages, launch, forms, and baseline structure so people can find and contact you. Monthly is recurring: hosting, updates, improvements, SEO pages as we add them, support, and keeping everything aligned with how you operate.",
+      "Setup is one-time: the rebuild, layout, content move, copy cleanup, forms, basic on-page SEO, Vercel deployment, preview, revisions, launch, and domain connection—priced from your page count. Monthly is recurring: hosting, maintenance, monitoring, SEO and analytics basics, lead forms, ZenLeads Starter, scheduled updates and landing pages, and support—plus ongoing improvements to the site itself.",
   },
   {
     question: "Why not pay once for a website?",
     answer:
-      "Search, competitors, and your services keep moving. A one-off build goes stale. The monthly plan keeps you visible, credible, and easy to reach—and keeps us accountable after launch.",
+      "Search, competitors, and your offers keep moving. A single project goes stale. The subscription keeps you credible, reachable, and improving—and keeps us accountable after go-live.",
   },
   {
     question: "Why monthly instead of hourly?",
     answer:
-      "Predictable cost and reserved attention for your business. We keep a shared list of improvements and prioritize what matters for calls and leads.",
+      "Predictable cost and reserved attention for your business. We maintain a clear backlog of improvements and prioritize what matters for leads and reputation.",
   },
   {
     question: "How should I think about ROI?",
     answer:
-      "We do not guarantee rankings or lead counts. Many local businesses only need a handful of extra good jobs per month for this to make sense. We will tell you honestly if the math does not fit.",
+      "We do not guarantee rankings or lead counts. Many local businesses only need a handful of extra good jobs per month for the math to work. We will tell you honestly if we are not the right fit.",
   },
   {
     question: "Do I own the assets?",
@@ -134,15 +180,15 @@ export const pricingFaqs: PricingFaqItem[] = [
       "Yes. Your content, accounts, and work product are yours. Access is documented so you are never locked out.",
   },
   {
-    question: "Can we change tiers?",
+    question: "What if I need more than the included updates?",
     answer:
-      "Yes. After any agreed start period, we can move between Launch, Growth, and Momentum as your needs change. Bigger scope shifts get a short written update so everyone is aligned.",
+      "Use the add-ons list for extra content updates, landing pages, new pages, blog posts, SEO passes, integrations, rush work, or ZenLeads upgrades. We quote anything custom before billing.",
   },
 ];
 
 export const pricingPageCta: ServicesCtaBlock = {
-  title: "Not sure which plan fits?",
-  body: "Tell us what you do, how leads find you now, and what more customers would look like for you. We will suggest Launch, Growth, or Momentum—or pass if we are not the right partner.",
-  primaryCta: { href: "/contact", label: "Talk with us" },
+  title: "Ready to upgrade your online presence?",
+  body: "Let's rebuild your site and launch fast. Tell us what you do, what you have today, and what “more leads” would look like—we will respond with clear next steps.",
+  primaryCta: { href: "/contact", label: "Book a strategy call" },
   secondaryCta: { href: "/how-it-works", label: "How it works" },
 };
